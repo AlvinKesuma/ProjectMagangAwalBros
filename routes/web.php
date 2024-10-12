@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LaporanKomiteMutuController;
 use App\Http\Controllers\AntibiotikProfilaksisController;
 use App\Http\Controllers\PenundaanOperasiElectif30MinController;
+use App\Http\Controllers\PenundaanOperasiElectif1JamController;
 
 /*
 |-------------------------------------------------------------------------- 
@@ -17,15 +18,16 @@ use App\Http\Controllers\PenundaanOperasiElectif30MinController;
 Route::get('/', [LaporanKomiteMutuController::class, 'index'])->name('laporan-komite-mutu.index');
 
 Route::get('/laporan-komite-mutu', [LaporanKomiteMutuController::class, 'index'])->name('laporan-komite-mutu.index');
-Route::post('/laporan-komite-mutu/form1/store', [LaporanKomiteMutuController::class, 'storeForm1'])->name('form1.store');
-Route::post('/laporan-komite-mutu/form2/store', [LaporanKomiteMutuController::class, 'storeForm2'])->name('form2.store');
 
 Route::resource('antibiotik-profilaksis', AntibiotikProfilaksisController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy']);
-
 Route::get('/antibiotik-profilaksis', [AntibiotikProfilaksisController::class, 'index'])->name('antibiotik-profilaksis.index');
+
 
 Route::resource('penundaan-operasi-electif-30Min', PenundaanOperasiElectif30MinController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy']); 
-
 Route::get('/penundaan-operasi-electif-30Min', [PenundaanOperasiElectif30MinController::class, 'index'])->name('penundaan-operasi-electif-30Min.index');
+
+Route::resource('penundaan-operasi-electif-1Jam', PenundaanOperasiElectif1JamController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']); 
+Route::get('/penundaan-operasi-electif-1Jam', [PenundaanOperasiElectif1JamController::class, 'index'])->name('penundaan-operasi-electif-1Jam.index');

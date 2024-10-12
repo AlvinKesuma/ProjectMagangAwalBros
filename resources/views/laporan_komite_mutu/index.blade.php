@@ -38,5 +38,17 @@ Laporan Komite Mutu
             <a href="{{ route('penundaan-operasi-electif-30Min.index') }}" class="btn btn-outline-primary">Detail</a>
         </div>
     </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                    Penundaan Operasi Elektif ≥ 1 Jam
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai penundaan operasi elektif lebih dari 1 jam.</p>
+            </div>
+            <a href="{{ route('penundaan-operasi-electif-1Jam.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
 </div>
 @endsection
