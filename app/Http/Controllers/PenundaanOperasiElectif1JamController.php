@@ -31,7 +31,7 @@ class PenundaanOperasiElectif1JamController extends Controller
         // Create a new entry
         PenundaanOperasiElectif1Jam::create($validated);
 
-        return redirect()->route('penundaan-operasi-electif-1Jam.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('penundaan-operasi-electif-1jam.index')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class PenundaanOperasiElectif1JamController extends Controller
         $data = PenundaanOperasiElectif1Jam::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('penundaan-operasi-electif-1Jam.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('penundaan-operasi-electif-1jam.index')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class PenundaanOperasiElectif1JamController extends Controller
         $data = PenundaanOperasiElectif1Jam::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('penundaan-operasi-electif-1Jam.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('penundaan-operasi-electif-1jam.index')->with('success', 'Data berhasil dihapus.');
     }
 }

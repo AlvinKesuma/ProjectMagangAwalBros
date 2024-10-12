@@ -31,7 +31,7 @@ class PenundaanOperasiElectif30MinController extends Controller
         // Create a new entry
         PenundaanOperasiElectif30Min::create($validated);
 
-        return redirect()->route('penundaan-operasi-electif-30Min.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('penundaan-operasi-electif-30min.index')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class PenundaanOperasiElectif30MinController extends Controller
         $data = PenundaanOperasiElectif30Min::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('penundaan-operasi-electif-30Min.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('penundaan-operasi-electif-30min.index')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class PenundaanOperasiElectif30MinController extends Controller
         $data = PenundaanOperasiElectif30Min::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('penundaan-operasi-electif-30Min.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('penundaan-operasi-electif-30min.index')->with('success', 'Data berhasil dihapus.');
     }
 }
