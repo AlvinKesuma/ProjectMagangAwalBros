@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateElectiveSurgeryDelaysTable extends Migration
+class CreatePenundaanOperasiElectif30MinTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateElectiveSurgeryDelaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('elective_surgery_delays_30_Min', function (Blueprint $table) {
+        Schema::create('Penundaan_Operasi_Electif_30Min', function (Blueprint $table) {
             $table->id();
             $table->string('unit')->default('Kamar Bedah');
             $table->decimal('num', 4, 1)->default(0.0); 
@@ -30,6 +30,6 @@ class CreateElectiveSurgeryDelaysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('elective_surgery_delays_30_Min');
+        Schema::dropIfExists('Penundaan_Operasi_Electif_30Min');
     }
 }

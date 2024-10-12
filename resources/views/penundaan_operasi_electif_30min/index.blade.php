@@ -27,7 +27,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
             @endif
 
             <div class="d-flex justify-content-between mb-4">
-                <h4>Data Penundaan Operasi Elektif <30 Menit</h4>
+                <h4>Data Penundaan Operasi Elektif < 30 Menit</h4>
                 <!-- Button trigger modal for creating data -->
                 <button
                     type="button"
@@ -57,8 +57,8 @@ Data Ketepatan Jenis Antibiotik Profilaksis
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->unit }}</td>
-                                <td>{{ $item->num }}</td>
-                                <td>{{ $item->denum }}</td>
+                                <td>{{ number_format($item->num, 1) }}</td>
+                                <td>{{ number_format($item->denum, 1) }}</td>
                                 <td>{{ $item->year }}</td>
                                 <td>
                                     <!-- Button trigger modal for editing data -->
@@ -168,7 +168,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
                 confirmDeleteButton.onclick = function() {
                     const form = document.createElement('form');
                     form.method = 'POST';
-                    form.action = "{{ url('elective-surgery-delay-30-min') }}/" + itemId;
+                    form.action = "{{ url('penundaan-operasi-electif-30Min') }}/" + itemId;
 
                     const csrfInput = document.createElement('input');
                     csrfInput.type = 'hidden';
@@ -191,7 +191,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
 
     function openCreateModal() {
         document.getElementById('formModal').reset();
-        document.getElementById('formModal').action = "{{ route('elective-surgery-delay-30-min.store') }}";
+        document.getElementById('formModal').action = "{{ route('penundaan-operasi-electif-30Min.store') }}";
         document.getElementById('formModal').querySelector('[name="_method"]').value = "POST";
         document.getElementById('exampleModalLabel1').innerText = "Tambah Data Penundaan Operasi Elektif";
         
@@ -201,7 +201,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
 
     function openEditModal(data) {
         document.getElementById('formModal').reset();
-        document.getElementById('formModal').action = "{{ url('elective-surgery-delay-30-min') }}/" + data.id;
+        document.getElementById('formModal').action = "{{ url('penundaan-operasi-electif-30Min') }}/" + data.id;
         document.getElementById('formModal').querySelector('[name="_method"]').value = "PUT";
         document.getElementById('exampleModalLabel1').innerText = "Edit Data Penundaan Operasi Elektif";
         

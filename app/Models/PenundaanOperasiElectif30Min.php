@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ElectiveSurgeryDelay30Min extends Model
+class PenundaanOperasiElectif30Min extends Model
 {
     use HasFactory;
 
-    protected $table = 'elective_surgery_delays_30_Min';
+    protected $table = 'Penundaan_Operasi_Electif_30Min';
 
     protected $fillable = [
         'unit',
