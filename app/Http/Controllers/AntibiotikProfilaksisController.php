@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AntibioticProphylaxis;
+use App\Models\AntibiotikProfilaksis;
 use Illuminate\Http\Request;
 
-class AntibioticProphylaxisController extends Controller
+class AntibiotikProfilaksisController extends Controller
 {
     public function index()
     {
-        $data = AntibioticProphylaxis::all();
-        return view('antibiotic_prophylaxis.index', compact('data'));
+        $data = AntibiotikProfilaksis::all();
+        return view('antibiotik_profilaksis.index', compact('data'));
     }
 
     public function create()
     {
         $unit = 'Kamar Bedah'; 
-        return view('antibiotic_prophylaxis.create', compact('unit'));
+        return view('antibiotik_profilaksis.create', compact('unit'));
     }
 
     public function store(Request $request)
@@ -28,16 +28,16 @@ class AntibioticProphylaxisController extends Controller
             'year' => 'required|in:2023,2024',
         ]);
 
-        AntibioticProphylaxis::create($validated);
+        AntibiotikProfilaksis::create($validated);
 
-        return redirect()->route('antibiotic-prophylaxis.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('antibiotik-profilaksis.index')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
     {
-        $data = AntibioticProphylaxis::findOrFail($id);
+        $data = AntibiotikProfilaksis::findOrFail($id);
         $unit = 'Kamar Bedah'; 
-        return view('antibiotic_prophylaxis.edit', compact('data', 'unit'));
+        return view('antibiotik_profilaksis.edit', compact('data', 'unit'));
     }
 
     public function update(Request $request, $id)
@@ -49,17 +49,17 @@ class AntibioticProphylaxisController extends Controller
             'year' => 'required|in:2023,2024',
         ]);
 
-        $data = AntibioticProphylaxis::findOrFail($id);
+        $data = AntibiotikProfilaksis::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('antibiotic-prophylaxis.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('antibiotik-profilaksis.index')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
     {
-        $data = AntibioticProphylaxis::findOrFail($id);
+        $data = AntibiotikProfilaksis::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('antibiotic-prophylaxis.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('antibiotik-profilaksis.index')->with('success', 'Data berhasil dihapus.');
     }
 }

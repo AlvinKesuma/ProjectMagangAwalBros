@@ -23,7 +23,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai ketepatan jenis antibiotik profilaksis.</p>
             </div>
-            <a href="{{ route('antibiotic-prophylaxis.index') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('antibiotik-profilaksis.index') }}" class="btn btn-outline-primary">Detail</a>
         </div>
     </div>
 

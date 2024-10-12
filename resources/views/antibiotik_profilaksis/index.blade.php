@@ -62,7 +62,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
                                     >
                                       Edit
                                     </button>
-                                    <form action="{{ route('antibiotic-prophylaxis.destroy', $item->id) }}" method="POST" class="d-inline-block delete-form">
+                                    <form action="{{ route('antibiotik-profilaksis.destroy', $item->id) }}" method="POST" class="d-inline-block delete-form">
                                         @csrf
                                         @method('DELETE')
                                         <button type="button" class="btn btn-danger btn-sm delete-button">Hapus</button>
@@ -175,7 +175,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
 
     function openCreateModal() {
         document.getElementById('formModal').reset();
-        document.getElementById('formModal').action = "{{ route('antibiotic-prophylaxis.store') }}";
+        document.getElementById('formModal').action = "{{ route('antibiotik-profilaksis.store') }}";
         document.getElementById('formModal').querySelector('[name="_method"]').value = "POST";
         document.getElementById('exampleModalLabel1').innerText = "Tambah Data Antibiotik Profilaksis";
 
@@ -185,7 +185,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
 
     function openEditModal(data) {
         document.getElementById('formModal').reset();
-        document.getElementById('formModal').action = "{{ url('antibiotic-prophylaxis') }}/" + data.id;
+        document.getElementById('formModal').action = "{{ url('antibiotik-profilaksis') }}/" + data.id;
         document.getElementById('formModal').querySelector('[name="_method"]').value = "PUT";
         document.getElementById('exampleModalLabel1').innerText = "Edit Data Antibiotik Profilaksis";
         

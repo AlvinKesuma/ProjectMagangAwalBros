@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LaporanKomiteMutuController;
-use App\Http\Controllers\AntibioticProphylaxisController;
+use App\Http\Controllers\AntibiotikProfilaksisController;
 use App\Http\Controllers\ElectiveSurgeryDelay30MinController;
 
 /*
@@ -26,14 +26,14 @@ Route::post('/laporan-komite-mutu/form1/store', [LaporanKomiteMutuController::cl
 // Rute untuk menyimpan data dari form 2
 Route::post('/laporan-komite-mutu/form2/store', [LaporanKomiteMutuController::class, 'storeForm2'])->name('form2.store');
 
-// Resource routes for AntibioticProphylaxisController
-Route::resource('antibiotic-prophylaxis', AntibioticProphylaxisController::class);
+// Resource routes for AntibiotikProfilaksisController
+Route::resource('antibiotik-profilaksis', AntibiotikProfilaksisController::class);
 
 // Rute untuk akses halaman tambahan dari AntibioticProphylaxis
-Route::get('/antibiotic-prophylaxis', [AntibioticProphylaxisController::class, 'index'])->name('antibiotic-prophylaxis.index');
+Route::get('/antibiotik-profilaksis', [AntibiotikProfilaksisController::class, 'index'])->name('antibiotik-profilaksis.index');
 
 // Rute untuk menyimpan data dari antibiotik profilaksis
-Route::post('/antibiotic-prophylaxis/store', [AntibioticProphylaxisController::class, 'store'])->name('antibiotic-prophylaxis.store');
+Route::post('/antibiotik-profilaksis/store', [AntibiotikProfilaksisController::class, 'store'])->name('antibiotik-profilaksis.store');
 
 // Resource routes for ElectiveSurgeryDelay30MinController
 Route::resource('elective-surgery-delay-30-min', ElectiveSurgeryDelay30MinController::class);
