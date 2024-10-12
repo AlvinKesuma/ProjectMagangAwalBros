@@ -36,10 +36,10 @@ Route::get('/antibiotic-prophylaxis', [AntibioticProphylaxisController::class, '
 Route::post('/antibiotic-prophylaxis/store', [AntibioticProphylaxisController::class, 'store'])->name('antibiotic-prophylaxis.store');
 
 // Resource routes for ElectiveSurgeryDelay30MinController
-Route::resource('elective-surgery-delay', ElectiveSurgeryDelay30MinController::class);
+Route::resource('elective-surgery-delay-30-min', ElectiveSurgeryDelay30MinController::class);
 
 // Rute untuk akses halaman tambahan dari ElectiveSurgeryDelay30Min
-Route::get('/elective-surgery-delay', [ElectiveSurgeryDelay30MinController::class, 'index'])->name('elective-surgery-delay.index');
+Route::get('/elective-surgery-delay-30-min', [ElectiveSurgeryDelay30MinController::class, 'index'])->name('elective-surgery-delay-30-min.index');
 
 // Rute untuk menyimpan data dari penundaan operasi elektif
-Route::post('/elective-surgery-delay/store', [ElectiveSurgeryDelay30MinController::class, 'store'])->name('elective-surgery-delay.store');
+Route::post('/elective-surgery-delay-30-min/store', [ElectiveSurgeryDelay30MinController::class, 'store'])->name('elective-surgery-delay-30-min.store');

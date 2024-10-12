@@ -30,7 +30,7 @@ class ElectiveSurgeryDelay30MinController extends Controller
 
         ElectiveSurgeryDelay30Min::create($validated);
 
-        return redirect('/elective-surgery-delay')->with('success', 'Data berhasil disimpan.');
+        return redirect('/elective-surgery-delay-30-min')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -52,7 +52,7 @@ class ElectiveSurgeryDelay30MinController extends Controller
         $data = ElectiveSurgeryDelay30Min::findOrFail($id);
         $data->update($validated);
 
-        return redirect('/elective-surgery-delay')->with('success', 'Data berhasil diperbarui.');
+        return redirect('/elective-surgery-delay-30-min')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -60,6 +60,6 @@ class ElectiveSurgeryDelay30MinController extends Controller
         $data = ElectiveSurgeryDelay30Min::findOrFail($id);
         $data->delete();
 
-        return redirect('/elective-surgery-delay')->with('success', 'Data berhasil dihapus.');
+        return redirect('/elective-surgery-delay-30-min')->with('success', 'Data berhasil dihapus.');
     }
 }

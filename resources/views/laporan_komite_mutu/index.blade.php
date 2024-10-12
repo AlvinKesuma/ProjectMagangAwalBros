@@ -35,7 +35,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai penundaan operasi elektif kurang dari 30 menit.</p>
             </div>
-            <a href="{{ route('elective-surgery-delay.index') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('elective-surgery-delay-30-min.index') }}" class="btn btn-outline-primary">Detail</a>
         </div>
     </div>
 </div>
