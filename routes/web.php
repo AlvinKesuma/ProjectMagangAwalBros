@@ -24,10 +24,10 @@ Route::resource('antibiotik-profilaksis', AntibiotikProfilaksisController::class
 Route::get('/antibiotik-profilaksis', [AntibiotikProfilaksisController::class, 'index'])->name('antibiotik-profilaksis.index');
 
 
-Route::resource('penundaan-operasi-electif-30Min', PenundaanOperasiElectif30MinController::class)
+Route::resource('penundaan-operasi-electif-30min', PenundaanOperasiElectif30MinController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy']); 
-Route::get('/penundaan-operasi-electif-30Min', [PenundaanOperasiElectif30MinController::class, 'index'])->name('penundaan-operasi-electif-30Min.index');
+Route::get('/penundaan-operasi-electif-30min', [PenundaanOperasiElectif30MinController::class, 'index'])->name('penundaan-operasi-electif-30min.index');
 
-Route::resource('penundaan-operasi-electif-1Jam', PenundaanOperasiElectif1JamController::class)
+Route::resource('penundaan-operasi-electif-1jam', PenundaanOperasiElectif1JamController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy']); 
-Route::get('/penundaan-operasi-electif-1Jam', [PenundaanOperasiElectif1JamController::class, 'index'])->name('penundaan-operasi-electif-1Jam.index');
+Route::get('/penundaan-operasi-electif-1jam', [PenundaanOperasiElectif1JamController::class, 'index'])->name('penundaan-operasi-electif-1jam.index');

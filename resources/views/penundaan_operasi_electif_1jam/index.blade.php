@@ -168,7 +168,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
                 confirmDeleteButton.onclick = function() {
                     const form = document.createElement('form');
                     form.method = 'POST';
-                    form.action = "{{ url('penundaan-operasi-electif-1Jam') }}/" + itemId;
+                    form.action = "{{ url('penundaan-operasi-electif-1jam') }}/" + itemId;
 
                     const csrfInput = document.createElement('input');
                     csrfInput.type = 'hidden';
@@ -191,7 +191,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
 
     function openCreateModal() {
         document.getElementById('formModal').reset();
-        document.getElementById('formModal').action = "{{ route('penundaan-operasi-electif-1Jam.store') }}";
+        document.getElementById('formModal').action = "{{ route('penundaan-operasi-electif-1jam.store') }}";
         document.getElementById('formModal').querySelector('[name="_method"]').value = "POST";
         document.getElementById('exampleModalLabel1').innerText = "Tambah Data Penundaan Operasi Elektif";
         
@@ -201,7 +201,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
 
     function openEditModal(data) {
         document.getElementById('formModal').reset();
-        document.getElementById('formModal').action = "{{ url('penundaan-operasi-electif-1Jam') }}/" + data.id;
+        document.getElementById('formModal').action = "{{ url('penundaan-operasi-electif-1jam') }}/" + data.id;
         document.getElementById('formModal').querySelector('[name="_method"]').value = "PUT";
         document.getElementById('exampleModalLabel1').innerText = "Edit Data Penundaan Operasi Elektif";
         

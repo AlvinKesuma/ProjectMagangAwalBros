@@ -35,7 +35,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai penundaan operasi elektif kurang dari 30 menit.</p>
             </div>
-            <a href="{{ route('penundaan-operasi-electif-30Min.index') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('penundaan-operasi-electif-30min.index') }}" class="btn btn-outline-primary">Detail</a>
         </div>
     </div>
 
@@ -47,7 +47,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai penundaan operasi elektif lebih dari 1 jam.</p>
             </div>
-            <a href="{{ route('penundaan-operasi-electif-1Jam.index') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('penundaan-operasi-electif-1jam.index') }}" class="btn btn-outline-primary">Detail</a>
         </div>
     </div>
 </div>
