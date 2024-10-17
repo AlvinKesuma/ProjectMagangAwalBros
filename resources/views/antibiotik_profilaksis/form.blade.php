@@ -1,4 +1,4 @@
-<form action="{{ route('antibiotic-prophylaxis.update', $data->id) }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('antibiotik-profilaksis.update', $data->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 

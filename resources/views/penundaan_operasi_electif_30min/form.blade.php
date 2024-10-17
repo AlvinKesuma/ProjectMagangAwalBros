@@ -1,4 +1,4 @@
-<form action="{{ route('elective-surgery-delay.update', $data->id) }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('penundaan-operasi-electif-30min.update', $data->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Data Ketepatan Jenis Antibiotik Profilaksis
+Data Penundaan Operasi Elektif ≥ 1 Jam
 @endsection
 
 @section('content')
@@ -27,7 +27,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
             @endif
 
             <div class="d-flex justify-content-between mb-4">
-                <h4>Data Penundaan Operasi Elektif > 1 Jam</h4>
+                <h4>Data Penundaan Operasi Elektif ≥ 1 Jam</h4>
                 <!-- Button trigger modal for creating data -->
                 <button
                     type="button"
@@ -91,7 +91,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel1">Form Data Penundaan Operasi Elektif</h5>
+                <h5 class="modal-title" id="exampleModalLabel1">Form Data Penundaan Operasi Elektif ≥ 1 Jam</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form id="formModal" action="" method="POST" enctype="multipart/form-data">
@@ -193,7 +193,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
         document.getElementById('formModal').reset();
         document.getElementById('formModal').action = "{{ route('penundaan-operasi-electif-1jam.store') }}";
         document.getElementById('formModal').querySelector('[name="_method"]').value = "POST";
-        document.getElementById('exampleModalLabel1').innerText = "Tambah Data Penundaan Operasi Elektif";
+        document.getElementById('exampleModalLabel1').innerText = "Tambah Data Penundaan Operasi Elektif ≥ 1 Jam";
         
         // Autofill unit field with "Kamar Bedah"
         document.getElementById('unit').value = "Kamar Bedah";
@@ -203,7 +203,7 @@ Data Ketepatan Jenis Antibiotik Profilaksis
         document.getElementById('formModal').reset();
         document.getElementById('formModal').action = "{{ url('penundaan-operasi-electif-1jam') }}/" + data.id;
         document.getElementById('formModal').querySelector('[name="_method"]').value = "PUT";
-        document.getElementById('exampleModalLabel1').innerText = "Edit Data Penundaan Operasi Elektif";
+        document.getElementById('exampleModalLabel1').innerText = "Edit Data Penundaan Operasi Elektif ≥ 1 Jam";
         
         document.getElementById('unit').value = data.unit;
         document.getElementById('num').value = data.num;
