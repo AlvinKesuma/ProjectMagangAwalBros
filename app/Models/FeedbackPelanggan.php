@@ -11,10 +11,5 @@ class FeedbackPelanggan extends Model
 
     protected $table = 'feedback_pelanggan';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

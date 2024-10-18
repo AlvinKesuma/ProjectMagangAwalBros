@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KepatuhanAlurKlinis;
+use App\Models\KepatuhanFormulariumNasional;
 use Illuminate\Http\Request;
 
-class KepatuhanAlurKlinisController extends Controller
+class KepatuhanFormulariumNasionalController extends Controller
 {
     public function index()
     {
-        $data = KepatuhanAlurKlinis::all();
+        $data = KepatuhanFormulariumNasional::all();
         return view('kepatuhan_formularium_nasional.index', compact('data'));
     }
 
@@ -25,18 +25,19 @@ class KepatuhanAlurKlinisController extends Controller
             'unit' => 'required|string|max:255',
             'num' => 'required|numeric|between:0,100.0',
             'denum' => 'required|numeric|between:0,100.0',
+            'month' => 'required|in:Januari,Februari,Maret,April,Mei,Juni,Juli,Agustus,September,Oktober,November,Desember',
             'year' => 'required|in:2023,2024', 
         ]);
 
         // Create a new entry
-        KepatuhanAlurKlinis::create($validated);
+        KepatuhanFormulariumNasional::create($validated);
 
         return redirect()->route('kepatuhan-formularium-nasional.index')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
     {
-        $data = KepatuhanAlurKlinis::findOrFail($id);
+        $data = KepatuhanFormulariumNasional::findOrFail($id);
         $unit = 'Farmasi';
         return view('kepatuhan_formularium_nasional.edit', compact('data', 'unit'));
     }
@@ -47,11 +48,12 @@ class KepatuhanAlurKlinisController extends Controller
             'unit' => 'required|string|max:255',
             'num' => 'required|numeric|between:0,100.0',
             'denum' => 'required|numeric|between:0,100.0',
+            'month' => 'required|in:Januari,Februari,Maret,April,Mei,Juni,Juli,Agustus,September,Oktober,November,Desember',
             'year' => 'required|in:2023,2024', 
         ]);
 
         // Find the existing entry and update it
-        $data = KepatuhanAlurKlinis::findOrFail($id);
+        $data = KepatuhanFormulariumNasional::findOrFail($id);
         $data->update($validated);
 
         return redirect()->route('kepatuhan-formularium-nasional.index')->with('success', 'Data berhasil diperbarui.');
@@ -59,7 +61,7 @@ class KepatuhanAlurKlinisController extends Controller
 
     public function destroy($id)
     {
-        $data = KepatuhanAlurKlinis::findOrFail($id);
+        $data = KepatuhanFormulariumNasional::findOrFail($id);
         $data->delete();
 
         return redirect()->route('kepatuhan-formularium-nasional.index')->with('success', 'Data berhasil dihapus.');

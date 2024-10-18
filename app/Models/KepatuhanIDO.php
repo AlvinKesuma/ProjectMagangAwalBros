@@ -11,10 +11,5 @@ class KepatuhanIDO extends Model
 
     protected $table = 'kepatuhan_ido';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

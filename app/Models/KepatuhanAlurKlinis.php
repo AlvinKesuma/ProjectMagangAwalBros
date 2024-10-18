@@ -11,10 +11,5 @@ class KepatuhanAlurKlinis extends Model
 
     protected $table = 'kepatuhan_alur_klinis';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

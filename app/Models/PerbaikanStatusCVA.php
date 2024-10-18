@@ -11,10 +11,5 @@ class PerbaikanStatusCVA extends Model
 
     protected $table = 'perbaikan_status_cva';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

@@ -48,6 +48,7 @@ Data Penundaan Operasi Elektif ≥ 1 Jam
                             <th>Unit</th>
                             <th>Num</th>
                             <th>Denum</th>
+                            <th>Bulan</th>
                             <th>Tahun</th>
                             <th>Aksi</th>
                         </tr>
@@ -59,6 +60,7 @@ Data Penundaan Operasi Elektif ≥ 1 Jam
                                 <td>{{ $item->unit }}</td>
                                 <td>{{ number_format($item->num, 1) }}</td>
                                 <td>{{ number_format($item->denum, 1) }}</td>
+                                <td>{{ $item->month }}</td>
                                 <td>{{ $item->year }}</td>
                                 <td>
                                     <!-- Button trigger modal for editing data -->
@@ -76,7 +78,7 @@ Data Penundaan Operasi Elektif ≥ 1 Jam
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="6" class="text-center">Tidak ada data.</td>
+                                <td colspan="7" class="text-center">Tidak ada data.</td>
                             </tr>
                         @endforelse
                     </tbody>
@@ -113,6 +115,24 @@ Data Penundaan Operasi Elektif ≥ 1 Jam
                             <label for="denum" class="form-label">Denum</label>
                             <input type="number" step="0.1" id="denum" name="denum" class="form-control" placeholder="Masukkan Denum" required>
                         </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="month" class="form-label">Bulan</label>
+                        <select id="month" name="month" class="form-select" required>
+                            <option value="">Pilih Bulan</option>
+                            <option value="Januari">Januari</option>
+                            <option value="Februari">Februari</option>
+                            <option value="Maret">Maret</option>
+                            <option value="April">April</option>
+                            <option value="Mei">Mei</option>
+                            <option value="Juni">Juni</option>
+                            <option value="Juli">Juli</option>
+                            <option value="Agustus">Agustus</option>
+                            <option value="September">September</option>
+                            <option value="Oktober">Oktober</option>
+                            <option value="November">November</option>
+                            <option value="Desember">Desember</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="year" class="form-label">Tahun</label>
@@ -208,6 +228,7 @@ Data Penundaan Operasi Elektif ≥ 1 Jam
         document.getElementById('unit').value = data.unit;
         document.getElementById('num').value = data.num;
         document.getElementById('denum').value = data.denum;
+        document.getElementById('month').value = data.month;
         document.getElementById('year').value = data.year;
     }
 </script>

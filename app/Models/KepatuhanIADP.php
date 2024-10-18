@@ -11,10 +11,5 @@ class KepatuhanIADP extends Model
 
     protected $table = 'kepatuhan_iadp';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

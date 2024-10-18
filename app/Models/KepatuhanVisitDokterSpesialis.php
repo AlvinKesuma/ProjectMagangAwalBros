@@ -11,10 +11,5 @@ class KepatuhanVisitDokterSpesialis extends Model
 
     protected $table = 'kepatuhan_visit_dokter_spesialis';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

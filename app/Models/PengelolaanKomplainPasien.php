@@ -11,10 +11,5 @@ class PengelolaanKomplainPasien extends Model
 
     protected $table = 'pengelolaan_komplain_pasien';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

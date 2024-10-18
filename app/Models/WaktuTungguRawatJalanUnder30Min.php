@@ -11,10 +11,5 @@ class WaktuTungguRawatJalanUnder30Min extends Model
 
     protected $table = 'waktu_tunggu_rawat_jalan_under30min';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

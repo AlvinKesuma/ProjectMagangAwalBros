@@ -11,10 +11,5 @@ class WaktuTanggapSeksiSesarea extends Model
 
     protected $table = 'waktu_tanggap_seksi_sesarea';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

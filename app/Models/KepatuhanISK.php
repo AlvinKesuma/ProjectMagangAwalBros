@@ -11,10 +11,5 @@ class KepatuhanISK extends Model
 
     protected $table = 'kepatuhan_isk';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

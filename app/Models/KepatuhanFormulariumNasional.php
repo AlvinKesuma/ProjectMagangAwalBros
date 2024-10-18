@@ -11,10 +11,5 @@ class KepatuhanFormulariumNasional extends Model
 
     protected $table = 'kepatuhan_formularium_nasional';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

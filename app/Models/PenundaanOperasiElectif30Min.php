@@ -11,10 +11,5 @@ class PenundaanOperasiElectif30Min extends Model
 
     protected $table = 'Penundaan_Operasi_Electif_30Min';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

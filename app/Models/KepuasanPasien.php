@@ -11,10 +11,5 @@ class KepuasanPasien extends Model
 
     protected $table = 'kepuasan_pasien';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

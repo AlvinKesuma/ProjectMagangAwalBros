@@ -11,5 +11,5 @@ class AntibiotikProfilaksis extends Model
 
     protected $table = 'antibiotik_profilaksis';
 
-    protected $fillable = ['unit', 'num', 'denum', 'year'];
+    protected $guarded = ['id'];
 }

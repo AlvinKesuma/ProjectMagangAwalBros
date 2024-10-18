@@ -11,10 +11,5 @@ class LOSgagalJantungAkut extends Model
 
     protected $table = 'los_gagal_jantung_akut';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

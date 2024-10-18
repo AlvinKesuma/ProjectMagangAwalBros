@@ -11,10 +11,5 @@ class KejadianWaterIntrusion extends Model
 
     protected $table = 'kejadian_water_intrusion';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

@@ -11,10 +11,5 @@ class RehospitalisasiGeriatri extends Model
 
     protected $table = 'rehospitalisasi_geriatri';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

@@ -11,10 +11,5 @@ class KelengkapanResepRawatJalan extends Model
 
     protected $table = 'kelengkapan_resep_rawat_jalan';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

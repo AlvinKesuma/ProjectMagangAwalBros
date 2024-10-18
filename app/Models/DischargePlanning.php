@@ -11,10 +11,5 @@ class DischargePlanning extends Model
 
     protected $table = 'discharge_planning';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

@@ -23,9 +23,8 @@ class WaktuTungguRawatJalan30MinController extends Controller
     {
         $validated = $request->validate([
             'unit' => 'required|string|max:255',
-            'num' => 'required|numeric|between:0,100.0',
-            'denum' => 'required|numeric|between:0,100.0',
-            'year' => 'required|in:2023,2024', 
+            'month' => 'required|in:Januari,Februari,Maret,April,Mei,Juni,Juli,Agustus,September,Oktober,November,Desember',
+            'tahun_2024' => 'required|numeric|between:0,100.0',
         ]);
 
         // Create a new entry
@@ -45,9 +44,8 @@ class WaktuTungguRawatJalan30MinController extends Controller
     {
         $validated = $request->validate([
             'unit' => 'required|string|max:255',
-            'num' => 'required|numeric|between:0,100.0',
-            'denum' => 'required|numeric|between:0,100.0',
-            'year' => 'required|in:2023,2024', 
+            'month' => 'required|in:Januari,Februari,Maret,April,Mei,Juni,Juli,Agustus,September,Oktober,November,Desember',
+            'tahun_2024' => 'required|numeric|between:0,100.0',
         ]);
 
         // Find the existing entry and update it

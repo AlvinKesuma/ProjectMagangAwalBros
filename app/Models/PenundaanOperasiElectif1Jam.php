@@ -11,10 +11,5 @@ class PenundaanOperasiElectif1Jam extends Model
 
     protected $table = 'Penundaan_Operasi_Electif_1Jam';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }

@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('kepuasan_pasien', function (Blueprint $table) {
            $table->id();
             $table->string('unit')->default('CRO');
-            $table->decimal('num', 4, 1)->default(0.0); 
-            $table->decimal('denum', 4, 1)->default(0.0); 
-            $table->year('year');
+            $table->string('month');
+            $table->decimal('tahun_2023', 4, 1)->default(0.0); 
+            $table->decimal('tahun_2024', 4, 1)->default(0.0); 
             $table->timestamps();
         });
     }

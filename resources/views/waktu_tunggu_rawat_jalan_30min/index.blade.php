@@ -46,9 +46,8 @@ Data Rata-rata Waktu Tunggu Rawat Jalan 30 Menit
                         <tr>
                             <th>No</th>
                             <th>Unit</th>
-                            <th>Num</th>
-                            <th>Denum</th>
-                            <th>Tahun</th>
+                            <th>Bulan</th>
+                            <th>2024</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -57,9 +56,8 @@ Data Rata-rata Waktu Tunggu Rawat Jalan 30 Menit
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->unit }}</td>
-                                <td>{{ number_format($item->num, 1) }}</td>
-                                <td>{{ number_format($item->denum, 1) }}</td>
-                                <td>{{ $item->year }}</td>
+                                <td>{{ $item->month }}</td>
+                                <td>{{ number_format($item->tahun_2024, 1) }}</td>
                                 <td>
                                     <!-- Button trigger modal for editing data -->
                                     <button
@@ -96,7 +94,7 @@ Data Rata-rata Waktu Tunggu Rawat Jalan 30 Menit
             </div>
             <form id="formModal" action="" method="POST" enctype="multipart/form-data">
                 @csrf
-                @method('POST') 
+                @method('POST')
                 <div class="modal-body">
                     <div class="row mb-3">
                         <div class="col">
@@ -104,23 +102,29 @@ Data Rata-rata Waktu Tunggu Rawat Jalan 30 Menit
                             <input type="text" id="unit" name="unit" class="form-control" placeholder="Masukkan Unit" readonly>
                         </div>
                     </div>
+                    <div class="mb-3">
+                        <label for="month" class="form-label">Bulan</label>
+                        <select id="month" name="month" class="form-select" required>
+                            <option value="">Pilih Bulan</option>
+                            <option value="Januari">Januari</option>
+                            <option value="Februari">Februari</option>
+                            <option value="Maret">Maret</option>
+                            <option value="April">April</option>
+                            <option value="Mei">Mei</option>
+                            <option value="Juni">Juni</option>
+                            <option value="Juli">Juli</option>
+                            <option value="Agustus">Agustus</option>
+                            <option value="September">September</option>
+                            <option value="Oktober">Oktober</option>
+                            <option value="November">November</option>
+                            <option value="Desember">Desember</option>
+                        </select>
+                    </div>
                     <div class="row g-2 mb-3">
                         <div class="col">
-                            <label for="num" class="form-label">Num</label>
-                            <input type="number" step="0.1" id="num" name="num" class="form-control" placeholder="Masukkan Num" required>
+                            <label for="tahun_2024" class="form-label">Tahun 2024</label>
+                            <input type="number" step="0.1" id="tahun_2024" name="tahun_2024" class="form-control" placeholder="Masukkan Nilai" required>
                         </div>
-                        <div class="col">
-                            <label for="denum" class="form-label">Denum</label>
-                            <input type="number" step="0.1" id="denum" name="denum" class="form-control" placeholder="Masukkan Denum" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="year" class="form-label">Tahun</label>
-                        <select id="year" name="year" class="form-select" required>
-                            <option value="">Pilih Tahun</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -194,7 +198,7 @@ Data Rata-rata Waktu Tunggu Rawat Jalan 30 Menit
         document.getElementById('formModal').action = "{{ route('waktu-tunggu-rawat-jalan-30min.store') }}";
         document.getElementById('formModal').querySelector('[name="_method"]').value = "POST";
         document.getElementById('exampleModalLabel1').innerText = "Tambah Data Rata-rata Waktu Tunggu Rawat Jalan 30 Menit";
-        
+
         // Autofill unit field with "Mutu"
         document.getElementById('unit').value = "Mutu";
     }
@@ -204,11 +208,10 @@ Data Rata-rata Waktu Tunggu Rawat Jalan 30 Menit
         document.getElementById('formModal').action = "{{ url('waktu-tunggu-rawat-jalan-30min') }}/" + data.id;
         document.getElementById('formModal').querySelector('[name="_method"]').value = "PUT";
         document.getElementById('exampleModalLabel1').innerText = "Edit Data Rata-rata Waktu Tunggu Rawat Jalan 30 Menit";
-        
+
         document.getElementById('unit').value = data.unit;
-        document.getElementById('num').value = data.num;
-        document.getElementById('denum').value = data.denum;
-        document.getElementById('year').value = data.year;
+        document.getElementById('month').value = data.month;
+        document.getElementById('tahun_2024').value = data.tahun_2024;
     }
 </script>
 @endsection

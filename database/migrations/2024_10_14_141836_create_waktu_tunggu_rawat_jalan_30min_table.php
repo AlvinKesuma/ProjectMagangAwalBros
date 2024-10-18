@@ -16,9 +16,8 @@ return new class extends Migration
         Schema::create('waktu_tunggu_rawat_jalan_30min', function (Blueprint $table) {
             $table->id();
             $table->string('unit')->default('Mutu');
-            $table->decimal('num', 4, 1)->default(0.0); 
-            $table->decimal('denum', 4, 1)->default(0.0); 
-            $table->year('year');
+            $table->string('month');
+            $table->decimal('tahun_2024', 4, 1)->default(0.0); 
             $table->timestamps();
         });
     }

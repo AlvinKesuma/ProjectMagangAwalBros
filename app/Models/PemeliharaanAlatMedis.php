@@ -11,10 +11,5 @@ class PemeliharaanAlatMedis extends Model
 
     protected $table = 'pemeliharaan_alat_medis';
 
-    protected $fillable = [
-        'unit',
-        'num',
-        'denum',
-        'year'
-    ];
+    protected $guarded = ['id'];
 }
