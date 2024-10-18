@@ -15,6 +15,7 @@
                     class="form-control border-0 shadow-none"
                     placeholder="Search..."
                     aria-label="Search..."
+                    id="search-input"
                 />
             </div>
         </div>
@@ -95,3 +96,23 @@
         </ul>
     </div>
 </nav>
+
+<script>
+    document.getElementById('search-input').addEventListener('keyup', function(event) {
+        // Get the search query
+        const query = event.target.value.toLowerCase();
+        
+        // Get the items to be searched
+        const items = document.querySelectorAll('.searchable-item');
+        
+        // Loop through the items and hide/show based on the query
+        items.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(query)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+</script>

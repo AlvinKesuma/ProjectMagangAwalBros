@@ -15,7 +15,7 @@ Laporan Komite Mutu
         </div>
     @endif
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -27,7 +27,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -39,7 +39,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -51,7 +51,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -63,7 +63,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -75,7 +75,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -87,7 +87,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -99,7 +99,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -111,7 +111,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -123,7 +123,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -135,7 +135,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -147,7 +147,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -159,7 +159,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -171,7 +171,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -183,7 +183,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -195,7 +195,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -207,7 +207,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -219,7 +219,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -231,7 +231,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -243,7 +243,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -255,7 +255,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -267,7 +267,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -279,7 +279,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
@@ -291,7 +291,7 @@ Laporan Komite Mutu
         </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm searchable-item">
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
