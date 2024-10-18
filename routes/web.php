@@ -2,6 +2,28 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LaporanKomiteMutuController;
+use App\Http\Controllers\KepatuhanIdentifikasiController;
+use App\Http\Controllers\IdentifikasiPemberianObatController;
+use App\Http\Controllers\PasienPemberianObatController;
+use App\Http\Controllers\PasienPemberianDarahController;
+use App\Http\Controllers\TeknikSBARPerawatController;
+use App\Http\Controllers\ElektrolitPekatController;
+use App\Http\Controllers\PencegahanResikoJatuhController;
+use App\Http\Controllers\PasienPemberianNutrisiController;
+use App\Http\Controllers\SampelDarahLaboratoriumController;
+use App\Http\Controllers\IdentifikasiPasienRadiologiController;
+use App\Http\Controllers\ProsesReadBackController;
+use App\Http\Controllers\HasilKritisLaboratoriumController;
+use App\Http\Controllers\PembuanganObatNarkotikaController;
+use App\Http\Controllers\PelabelanObatPasienController;
+use App\Http\Controllers\OperatorDaerahOperasiController;
+use App\Http\Controllers\TimeOutVKController;
+use App\Http\Controllers\TimeOutPoliGigiController;
+use App\Http\Controllers\PetugasCuciTanganController;
+use App\Http\Controllers\PenggunaanAPDController;
+use App\Http\Controllers\InfoPenyakitPasienController;
+use App\Http\Controllers\BoardingTimePasienController;
+use App\Http\Controllers\AntibioticProphylaxisTypeController;
 use App\Http\Controllers\AntibiotikProfilaksisController;
 use App\Http\Controllers\PenundaanOperasiElectif30MinController;
 use App\Http\Controllers\PenundaanOperasiElectif1JamController;
@@ -40,6 +62,72 @@ Route::get('/', [LaporanKomiteMutuController::class, 'index'])->name('laporan-ko
 
 Route::resource('laporan-komite-mutu', LaporanKomiteMutuController::class)
     ->only(['index']);
+
+Route::resource('kepatuhan-identifikasi', KepatuhanIdentifikasiController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('identifikasi-pemberianobat', IdentifikasiPemberianObatController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('pasien-pemberianobat', PasienPemberianObatController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('pasien-pemberiandarah', PasienPemberianDarahController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('tekniksbar-perawat', TeknikSBARPerawatController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('elektrolit-pekat', ElektrolitPekatController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('pencegahan-resikojatuh', PencegahanResikoJatuhController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('pasien-pemberiannutrisi', PasienPemberianNutrisiController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('sampel-darahlaboratorium', SampelDarahLaboratoriumController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('identifikasi-pasienradiologi', IdentifikasiPasienRadiologiController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('proses-readback', ProsesReadBackController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('hasil-kritislaboratorium', HasilKritisLaboratoriumController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('pembuangan-obatnarkotika', PembuanganObatNarkotikaController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('pelabelan-obatpasien', PelabelanObatPasienController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('operator-daerahoperasi', OperatorDaerahOperasiController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('timeout-vk', TimeOutVKController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('timeout-poligigi', TimeOutPoliGigiController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('petugas-cucitangan', PetugasCuciTanganController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('penggunaan-apd', PenggunaanAPDController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('info-penyakitpasien', InfoPenyakitPasienController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('boarding-timepasien', BoardingTimePasienController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+Route::resource('antibiotic-prophylaxistype', AntibioticProphylaxisTypeController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy']);
 
 Route::resource('antibiotik-profilaksis', AntibiotikProfilaksisController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy']);
@@ -112,3 +200,6 @@ Route::resource('perbaikan-status-cva', PerbaikanStatusCVAController::class)
 
 Route::resource('los-gagal-jantung-akut', LOSgagalJantungAkutController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy']);
+
+
+    

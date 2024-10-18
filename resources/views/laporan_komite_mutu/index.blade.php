@@ -19,6 +19,270 @@ Laporan Komite Mutu
         <div class="card-body d-flex justify-content-between align-items-center">
             <div>
                 <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Identifikasi
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Identifikasi.</p>
+            </div>
+            <a href="{{ route('kepatuhan-identifikasi.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan pelaksanaan identifikasi pasien saat pemberian obat
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan pelaksanaan identifikasi pasien saat pemberian obat.</p>
+            </div>
+            <a href="{{ route('identifikasi-pemberianobat.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Identifikasi Pasien saat pemberian obat
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Identifikasi Pasien saat pemberian obat.</p>
+            </div>
+            <a href="{{ route('pasien-pemberianobat.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Identifikasi Pasien  saat Pemberian darah/produk darah
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Identifikasi Pasien  saat Pemberian darah/produk darah.</p>
+            </div>
+            <a href="{{ route('pasien-pemberiandarah.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Ketepatan komunikasi serah terima menggunakan teknik SBAR Perawat
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Ketepatan komunikasi serah terima menggunakan teknik SBAR Perawat.</p>
+            </div>
+            <a href="{{ route('tekniksbar-perawat.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Ketepatan monitoring pemberian elektrolit pekat
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Ketepatan monitoring pemberian elektrolit pekat.</p>
+            </div>
+            <a href="{{ route('elektrolit-pekat.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Ketepatan penatalaksanaan pencegahan risiko jatuh
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Ketepatan penatalaksanaan pencegahan risiko jatuh.</p>
+            </div>
+            <a href="{{ route('pencegahan-resikojatuh.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Identifikasi Pasien saat pemberian Nutrisi
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Identifikasi Pasien saat pemberian Nutrisi.</p>
+            </div>
+            <a href="{{ route('pasien-pemberiannutrisi.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan pelaksanaan identifikasi pasien sebelum pengambilan sampel darah laboratorium
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan pelaksanaan identifikasi pasien sebelum pengambilan sampel darah laboratorium.</p>
+            </div>
+            <a href="{{ route('sampel-darahlaboratorium.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Identifikasi Pasien saat melakukan pemeriksaan radiologi
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Identifikasi Pasien saat melakukan pemeriksaan radiologi.</p>
+            </div>
+            <a href="{{ route('identifikasi-pasienradiologi.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Pelaksanaan proses Read back dokter jaga
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Pelaksanaan proses Read back dokter jaga.</p>
+            </div>
+            <a href="{{ route('proses-readback.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Pelaporan Hasil Kritis Laboratorium < 30 Menit
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Pelaporan Hasil Kritis Laboratorium <30 Menit.</p>
+            </div>
+            <a href="{{ route('hasil-kritislaboratorium.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Ketepatan pembuangan sisa obat narkotika
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Ketepatan pembuangan sisa obat narkotika.</p>
+            </div>
+            <a href="{{ route('pembuangan-obatnarkotika.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Pelabelan Obat High Alert pada Sediaan Obat yang akan Diberikan ke Pasien Rawat Inap
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Pelabelan Obat High Alert pada Sediaan Obat yang akan Diberikan ke Pasien Rawat Inap.</p>
+            </div>
+            <a href="{{ route('pelabelan-obatpasien.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Dokter Operator memberikan marker pada daerah operasi
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Dokter Operator memberikan marker pada daerah operasi.</p>
+            </div>
+            <a href="{{ route('operator-daerahoperasi.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Tim Melaksanakan Proses Time Out di VK
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Tim Melaksanakan Proses Time Out di VK.</p>
+            </div>
+            <a href="{{ route('timeout-vk.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Tim Melaksanakan Proses Time Out di Poli gigi
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Tim Melaksanakan Proses Time Out di Poli gigi.</p>
+            </div>
+            <a href="{{ route('timeout-poligigi.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan petugas cuci tangan sebelum kontak ke pasien 
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan petugas cuci tangan sebelum kontak ke pasien.</p>
+            </div>
+            <a href="{{ route('petugas-cucitangan.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan Penggunaan APD 
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Penggunaan APD.</p>
+            </div>
+            <a href="{{ route('penggunaan-apd.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Kepatuhan DPJP Memberikan Informasi Penyakit Pasien 
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan DPJP Memberikan Informasi Penyakit Pasien.</p>
+            </div>
+            <a href="{{ route('info-penyakitpasien.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                Boarding Time Pasien < 120 Menit ke Ruang rawat inap 
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai Boarding Time Pasien <120 Menit ke Ruang rawat inap.</p>
+            </div>
+            <a href="{{ route('boarding-timepasien.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
+                    Ketepatan Pemberian Jenis Antibiotik Profilaksis pada Operasi Bersih dan Bersih Terkontaminasi 
+                </h5>
+                <p class="text-muted mb-0">Lihat detail laporan mengenai ketepatan pemberian jenis antibiotik profilaksis.</p>
+            </div>
+            <a href="{{ route('antibiotic-prophylaxistype.index') }}" class="btn btn-outline-primary">Detail</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm searchable-item">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="form-title text-secondary fw-bold">
                     Ketepatan Jenis Antibiotik Profilaksis pada Operasi Bersih dan Bersih Terkontaminasi 
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai ketepatan jenis antibiotik profilaksis.</p>
