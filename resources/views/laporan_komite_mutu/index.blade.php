@@ -23,7 +23,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Identifikasi.</p>
             </div>
-            <a href="{{ route('kepatuhan-identifikasi.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepatuhan-identifikasi.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -35,7 +35,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan pelaksanaan identifikasi pasien saat pemberian obat.</p>
             </div>
-            <a href="{{ route('identifikasi-pemberianobat.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('identifikasi-pemberianobat.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -47,7 +47,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Identifikasi Pasien saat pemberian obat.</p>
             </div>
-            <a href="{{ route('pasien-pemberianobat.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('pasien-pemberianobat.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -59,7 +59,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Identifikasi Pasien  saat Pemberian darah/produk darah.</p>
             </div>
-            <a href="{{ route('pasien-pemberiandarah.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('pasien-pemberiandarah.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -71,7 +71,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Ketepatan komunikasi serah terima menggunakan teknik SBAR Perawat.</p>
             </div>
-            <a href="{{ route('tekniksbar-perawat.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('tekniksbar-perawat.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -83,7 +83,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Ketepatan monitoring pemberian elektrolit pekat.</p>
             </div>
-            <a href="{{ route('elektrolit-pekat.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('elektrolit-pekat.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -95,7 +95,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Ketepatan penatalaksanaan pencegahan risiko jatuh.</p>
             </div>
-            <a href="{{ route('pencegahan-resikojatuh.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('pencegahan-resikojatuh.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -107,7 +107,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Identifikasi Pasien saat pemberian Nutrisi.</p>
             </div>
-            <a href="{{ route('pasien-pemberiannutrisi.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('pasien-pemberiannutrisi.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -119,7 +119,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan pelaksanaan identifikasi pasien sebelum pengambilan sampel darah laboratorium.</p>
             </div>
-            <a href="{{ route('sampel-darahlaboratorium.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('sampel-darahlaboratorium.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -131,7 +131,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Identifikasi Pasien saat melakukan pemeriksaan radiologi.</p>
             </div>
-            <a href="{{ route('identifikasi-pasienradiologi.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('identifikasi-pasienradiologi.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -143,7 +143,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Pelaksanaan proses Read back dokter jaga.</p>
             </div>
-            <a href="{{ route('proses-readback.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('proses-readback.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -155,7 +155,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Pelaporan Hasil Kritis Laboratorium <30 Menit.</p>
             </div>
-            <a href="{{ route('hasil-kritislaboratorium.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('hasil-kritislaboratorium.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -167,7 +167,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Ketepatan pembuangan sisa obat narkotika.</p>
             </div>
-            <a href="{{ route('pembuangan-obatnarkotika.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('pembuangan-obatnarkotika.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -179,7 +179,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Pelabelan Obat High Alert pada Sediaan Obat yang akan Diberikan ke Pasien Rawat Inap.</p>
             </div>
-            <a href="{{ route('pelabelan-obatpasien.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('pelabelan-obatpasien.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -191,7 +191,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Dokter Operator memberikan marker pada daerah operasi.</p>
             </div>
-            <a href="{{ route('operator-daerahoperasi.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('operator-daerahoperasi.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -203,7 +203,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Tim Melaksanakan Proses Time Out di VK.</p>
             </div>
-            <a href="{{ route('timeout-vk.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('timeout-vk.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -215,7 +215,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Tim Melaksanakan Proses Time Out di Poli gigi.</p>
             </div>
-            <a href="{{ route('timeout-poligigi.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('timeout-poligigi.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -227,7 +227,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan petugas cuci tangan sebelum kontak ke pasien.</p>
             </div>
-            <a href="{{ route('petugas-cucitangan.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('petugas-cucitangan.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -239,7 +239,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan Penggunaan APD.</p>
             </div>
-            <a href="{{ route('penggunaan-apd.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('penggunaan-apd.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -251,7 +251,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Kepatuhan DPJP Memberikan Informasi Penyakit Pasien.</p>
             </div>
-            <a href="{{ route('info-penyakitpasien.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('info-penyakitpasien.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -263,7 +263,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai Boarding Time Pasien <120 Menit ke Ruang rawat inap.</p>
             </div>
-            <a href="{{ route('boarding-timepasien.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('boarding-timepasien.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -275,7 +275,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai ketepatan pemberian jenis antibiotik profilaksis.</p>
             </div>
-            <a href="{{ route('antibiotic-prophylaxistype.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('antibiotic-prophylaxistype.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -287,7 +287,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai ketepatan jenis antibiotik profilaksis.</p>
             </div>
-            <a href="{{ route('antibiotik-profilaksis.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('antibiotik-profilaksis.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -299,7 +299,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai penundaan operasi elektif kurang dari 30 menit.</p>
             </div>
-            <a href="{{ route('penundaan-operasi-electif-30min.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('penundaan-operasi-electif-30min.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -311,7 +311,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan mengenai penundaan operasi elektif lebih dari 1 jam.</p>
             </div>
-            <a href="{{ route('penundaan-operasi-electif-1jam.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('penundaan-operasi-electif-1jam.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -323,7 +323,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail laporan waktu tanggap operasi seksio sesarea emergensi ≤ 30 menit.</p>
             </div>
-            <a href="{{ route('waktu-tanggap-seksi-sesarea.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('waktu-tanggap-seksi-sesarea.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -335,7 +335,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail penurunan presentasi kejadian water intrussion.</p>
             </div>
-            <a href="{{ route('kejadian-water-intrusion.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kejadian-water-intrusion.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -347,7 +347,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail ketepatan pemeliharaan alat medis high, medium & low risk (hanya stetoskop, tensimotor, termometer dan pen light).</p>
             </div>
-            <a href="{{ route('pemeliharaan-alat-medis.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('pemeliharaan-alat-medis.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -359,7 +359,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kepatuhan penerapan HAIs: VAP.</p>
             </div>
-            <a href="{{ route('kepatuhan-vap.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepatuhan-vap.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -371,7 +371,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kepatuhan penerapan HAIs: IDO.</p>
             </div>
-            <a href="{{ route('kepatuhan-ido.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepatuhan-ido.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -383,7 +383,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kepatuhan penerapan HAIs: IADP.</p>
             </div>
-            <a href="{{ route('kepatuhan-iadp.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepatuhan-iadp.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -395,7 +395,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kepatuhan penerapan HAIs: ISK.</p>
             </div>
-            <a href="{{ route('kepatuhan-isk.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepatuhan-isk.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -407,7 +407,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kelengkapan penulisan resep rawat jalan (prescribing error).</p>
             </div>
-            <a href="{{ route('kelengkapan-resep-rawat-jalan.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kelengkapan-resep-rawat-jalan.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -419,7 +419,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail monitoring penanganan komplain pasien rawat inap.</p>
             </div>
-            <a href="{{ route('pengelolaan-komplain-pasien.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('pengelolaan-komplain-pasien.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -431,7 +431,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kepuasan pasien (IKM).</p>
             </div>
-            <a href="{{ route('kepuasan-pasien.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepuasan-pasien.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -443,7 +443,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail rata-rata waktu tunggu rawat jalan 30 menit.</p>
             </div>
-            <a href="{{ route('waktu-tunggu-rawat-jalan-30min.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('waktu-tunggu-rawat-jalan-30min.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -455,7 +455,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail rata-rata waktu tunggu rawat jalan dengan waktu tunggu < 30 menit.</p>
             </div>
-            <a href="{{ route('waktu-rawat-jalan-under30min.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('waktu-rawat-jalan-under30min.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -467,7 +467,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail waktu tunggu rawat jalan dengan waktu tunggu > 60 Menit.</p>
             </div>
-            <a href="{{ route('waktu-rawat-jalan-up60min.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('waktu-rawat-jalan-up60min.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -479,7 +479,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kepatuhan waktu visit dokter spesialis sebelum jam 14:00 WIB.</p>
             </div>
-            <a href="{{ route('kepatuhan-visit-dokter-spesialis.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepatuhan-visit-dokter-spesialis.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -491,7 +491,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kepatuhan penggunaan formularium nasional.</p>
             </div>
-            <a href="{{ route('kepatuhan-formularium-nasional.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepatuhan-formularium-nasional.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -503,7 +503,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kepatuhan terhadap alur klinis (clinical pathway).</p>
             </div>
-            <a href="{{ route('kepatuhan-alur-klinis.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('kepatuhan-alur-klinis.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -515,7 +515,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail presentasi rawat inap ulang (Rehospitalisasi) pasien geriatri.</p>
             </div>
-            <a href="{{ route('rehospitalisasi-geriatri.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('rehospitalisasi-geriatri.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -527,7 +527,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail kesesuaian discharge planning DPJP dengan LOS pasien.</p>
             </div>
-            <a href="{{ route('discharge-planning.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('discharge-planning.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -539,7 +539,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail rasio negative feedback customer vs seluruh feedback yang diterima.</p>
             </div>
-            <a href="{{ route('feedback-pelanggan.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('feedback-pelanggan.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -551,7 +551,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail % Pasien CVA infark dan CVA hemorrhagik dengan perbaikan status fisiologis atau kesadaran dibandingkan saat masuk ranap.</p>
             </div>
-            <a href="{{ route('perbaikan-status-cva.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('perbaikan-status-cva.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 
@@ -563,7 +563,7 @@ Laporan Komite Mutu
                 </h5>
                 <p class="text-muted mb-0">Lihat detail LOS gagal jantung akut ≤ 7 hari.</p>
             </div>
-            <a href="{{ route('los-gagal-jantung-akut.form') }}" class="btn btn-outline-primary">Detail</a>
+            <a href="{{ route('los-gagal-jantung-akut.form') }}" class="btn btn-outline-primary">Lihat</a>
         </div>
     </div>
 </div>
