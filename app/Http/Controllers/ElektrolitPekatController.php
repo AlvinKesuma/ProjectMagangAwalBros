@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class ElektrolitPekatController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = ElektrolitPekat::all();
-        return view('elektrolit_pekat.index', compact('data'));
+        return view('elektrolit_pekat.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class ElektrolitPekatController extends Controller
 
         ElektrolitPekat::create($validated);
 
-        return redirect()->route('elektrolit-pekat.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('elektrolit-pekat.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class ElektrolitPekatController extends Controller
         $data = ElektrolitPekat::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('elektrolit-pekat.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('elektrolit-pekat.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class ElektrolitPekatController extends Controller
         $data = ElektrolitPekat::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('elektrolit-pekat.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('elektrolit-pekat.form')->with('success', 'Data berhasil dihapus.');
     }
 }

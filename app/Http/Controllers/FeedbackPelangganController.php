@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\FeedbackPelanggan;
 class FeedbackPelangganController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = FeedbackPelanggan::all();
-        return view('feedback_pelanggan.index', compact('data'));
+        return view('feedback_pelanggan.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class FeedbackPelangganController extends Controller
         // Create a new entry
         FeedbackPelanggan::create($validated);
 
-        return redirect()->route('feedback-pelanggan.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('feedback-pelanggan.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class FeedbackPelangganController extends Controller
         $data = FeedbackPelanggan::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('feedback-pelanggan.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('feedback-pelanggan.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,7 +62,7 @@ class FeedbackPelangganController extends Controller
         $data = FeedbackPelanggan::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('feedback-pelanggan.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('feedback-pelanggan.form')->with('success', 'Data berhasil dihapus.');
     }
 }
 

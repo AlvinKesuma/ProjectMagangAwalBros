@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class KepatuhanAlurKlinisController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepatuhanAlurKlinis::all();
-        return view('kepatuhan_alur_klinis.index', compact('data'));
+        return view('kepatuhan_alur_klinis.form', compact('data'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class KepatuhanAlurKlinisController extends Controller
         // Create a new entry
         KepatuhanAlurKlinis::create($validated);
 
-        return redirect()->route('kepatuhan-alur-klinis.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepatuhan-alur-klinis.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class KepatuhanAlurKlinisController extends Controller
         $data = KepatuhanAlurKlinis::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepatuhan-alur-klinis.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepatuhan-alur-klinis.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -64,6 +64,6 @@ class KepatuhanAlurKlinisController extends Controller
         $data = KepatuhanAlurKlinis::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepatuhan-alur-klinis.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepatuhan-alur-klinis.form')->with('success', 'Data berhasil dihapus.');
     }
 }

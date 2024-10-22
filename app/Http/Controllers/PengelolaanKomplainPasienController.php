@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class PengelolaanKomplainPasienController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PengelolaanKomplainPasien::all();
-        return view('pengelolaan_komplain_pasien.index', compact('data'));
+        return view('pengelolaan_komplain_pasien.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class PengelolaanKomplainPasienController extends Controller
         // Create a new entry
         PengelolaanKomplainPasien::create($validated);
 
-        return redirect()->route('pengelolaan-komplain-pasien.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('pengelolaan-komplain-pasien.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -55,7 +55,7 @@ class PengelolaanKomplainPasienController extends Controller
         $data = PengelolaanKomplainPasien::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('pengelolaan-komplain-pasien.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('pengelolaan-komplain-pasien.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -63,6 +63,6 @@ class PengelolaanKomplainPasienController extends Controller
         $data = PengelolaanKomplainPasien::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('pengelolaan-komplain-pasien.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('pengelolaan-komplain-pasien.form')->with('success', 'Data berhasil dihapus.');
     }
 }

@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class PetugasCuciTanganController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PetugasCuciTangan::all();
-        return view('petugas_cucitangan.index', compact('data'));
+        return view('petugas_cucitangan.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class PetugasCuciTanganController extends Controller
 
         PetugasCuciTangan::create($validated);
 
-        return redirect()->route('petugas-cucitangan.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('petugas-cucitangan.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class PetugasCuciTanganController extends Controller
         $data = PetugasCuciTangan::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('petugas-cucitangan.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('petugas-cucitangan.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class PetugasCuciTanganController extends Controller
         $data = PetugasCuciTangan::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('petugas-cucitangan.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('petugas-cucitangan.form')->with('success', 'Data berhasil dihapus.');
     }
 }

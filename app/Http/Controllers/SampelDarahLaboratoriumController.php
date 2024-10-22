@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class SampelDarahLaboratoriumController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = SampelDarahLaboratorium::all();
-        return view('sampel_darahlaboratorium.index', compact('data'));
+        return view('sampel_darahlaboratorium.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class SampelDarahLaboratoriumController extends Controller
 
         SampelDarahLaboratorium::create($validated);
 
-        return redirect()->route('sampel-darahlaboratorium.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('sampel-darahlaboratorium.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class SampelDarahLaboratoriumController extends Controller
         $data = SampelDarahLaboratorium::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('sampel-darahlaboratorium.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('sampel-darahlaboratorium.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class SampelDarahLaboratoriumController extends Controller
         $data = SampelDarahLaboratorium::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('sampel-darahlaboratorium.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('sampel-darahlaboratorium.form')->with('success', 'Data berhasil dihapus.');
     }
 }

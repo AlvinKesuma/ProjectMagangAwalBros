@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class WaktuTungguRawatJalan30MinController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = WaktuTungguRawatJalan30Min::all();
-        return view('waktu_tunggu_rawat_jalan_30Min.index', compact('data'));
+        return view('waktu_tunggu_rawat_jalan_30Min.form', compact('data'));
     }
 
     public function create()
@@ -30,7 +30,7 @@ class WaktuTungguRawatJalan30MinController extends Controller
         // Create a new entry
         WaktuTungguRawatJalan30Min::create($validated);
 
-        return redirect()->route('waktu-tunggu-rawat-jalan-30min.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('waktu-tunggu-rawat-jalan-30min.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -52,7 +52,7 @@ class WaktuTungguRawatJalan30MinController extends Controller
         $data = WaktuTungguRawatJalan30Min::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('waktu-tunggu-rawat-jalan-30min.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('waktu-tunggu-rawat-jalan-30min.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -60,7 +60,7 @@ class WaktuTungguRawatJalan30MinController extends Controller
         $data = WaktuTungguRawatJalan30Min::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('waktu-tunggu-rawat-jalan-30min.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('waktu-tunggu-rawat-jalan-30min.form')->with('success', 'Data berhasil dihapus.');
     }
 }
 

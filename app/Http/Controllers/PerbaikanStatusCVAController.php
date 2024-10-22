@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\PerbaikanStatusCVA;
 class PerbaikanStatusCVAController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PerbaikanStatusCVA::all();
-        return view('perbaikan_status_cva.index', compact('data'));
+        return view('perbaikan_status_cva.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class PerbaikanStatusCVAController extends Controller
         // Create a new entry
         PerbaikanStatusCVA::create($validated);
 
-        return redirect()->route('perbaikan-status-cva.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('perbaikan-status-cva.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class PerbaikanStatusCVAController extends Controller
         $data = PerbaikanStatusCVA::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('perbaikan-status-cva.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('perbaikan-status-cva.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,7 +62,7 @@ class PerbaikanStatusCVAController extends Controller
         $data = PerbaikanStatusCVA::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('perbaikan-status-cva.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('perbaikan-status-cva.form')->with('success', 'Data berhasil dihapus.');
     }
 }
 

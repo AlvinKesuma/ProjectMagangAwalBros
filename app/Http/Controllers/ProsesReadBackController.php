@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class ProsesReadBackController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = ProsesReadBack::all();
-        return view('proses_readback.index', compact('data'));
+        return view('proses_readback.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class ProsesReadBackController extends Controller
 
         ProsesReadBack::create($validated);
 
-        return redirect()->route('proses-readback.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('proses-readback.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class ProsesReadBackController extends Controller
         $data = ProsesReadBack::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('proses-readback.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('proses-readback.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class ProsesReadBackController extends Controller
         $data = ProsesReadBack::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('proses-readback.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('proses-readback.form')->with('success', 'Data berhasil dihapus.');
     }
 }

@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class HasilKritisLaboratoriumController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = HasilKritisLaboratorium::all();
-        return view('hasil_kritislaboratorium.index', compact('data'));
+        return view('hasil_kritislaboratorium.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class HasilKritisLaboratoriumController extends Controller
 
         HasilKritisLaboratorium::create($validated);
 
-        return redirect()->route('hasil-kritislaboratorium.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('hasil-kritislaboratorium.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class HasilKritisLaboratoriumController extends Controller
         $data = HasilKritisLaboratorium::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('hasil-kritislaboratorium.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('hasil-kritislaboratorium.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class HasilKritisLaboratoriumController extends Controller
         $data = HasilKritisLaboratorium::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('hasil-kritislaboratorium.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('hasil-kritislaboratorium.form')->with('success', 'Data berhasil dihapus.');
     }
 }

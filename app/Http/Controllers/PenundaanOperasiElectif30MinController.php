@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class PenundaanOperasiElectif30MinController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PenundaanOperasiElectif30Min::all();
-        return view('penundaan_operasi_electif_30Min.index', compact('data'));
+        return view('penundaan_operasi_electif_30Min.form', compact('data'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class PenundaanOperasiElectif30MinController extends Controller
         // Create a new entry
         PenundaanOperasiElectif30Min::create($validated);
 
-        return redirect()->route('penundaan-operasi-electif-30min.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('penundaan-operasi-electif-30min.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class PenundaanOperasiElectif30MinController extends Controller
         $data = PenundaanOperasiElectif30Min::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('penundaan-operasi-electif-30min.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('penundaan-operasi-electif-30min.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -64,6 +64,6 @@ class PenundaanOperasiElectif30MinController extends Controller
         $data = PenundaanOperasiElectif30Min::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('penundaan-operasi-electif-30min.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('penundaan-operasi-electif-30min.form')->with('success', 'Data berhasil dihapus.');
     }
 }

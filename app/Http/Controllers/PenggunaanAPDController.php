@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class PenggunaanAPDController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PenggunaanAPD::all();
-        return view('penggunaan_apd.index', compact('data'));
+        return view('penggunaan_apd.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class PenggunaanAPDController extends Controller
 
         PenggunaanAPD::create($validated);
 
-        return redirect()->route('penggunaan-apd.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('penggunaan-apd.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class PenggunaanAPDController extends Controller
         $data = PenggunaanAPD::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('penggunaan-apd.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('penggunaan-apd.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class PenggunaanAPDController extends Controller
         $data = PenggunaanAPD::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('penggunaan-apd.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('penggunaan-apd.form')->with('success', 'Data berhasil dihapus.');
     }
 }

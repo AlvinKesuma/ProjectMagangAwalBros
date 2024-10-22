@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class OperatorDaerahOperasiController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = OperatorDaerahOperasi::all();
-        return view('operator_daerahoperasi.index', compact('data'));
+        return view('operator_daerahoperasi.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class OperatorDaerahOperasiController extends Controller
 
         OperatorDaerahOperasi::create($validated);
 
-        return redirect()->route('operator-daerahoperasi.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('operator-daerahoperasi.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class OperatorDaerahOperasiController extends Controller
         $data = OperatorDaerahOperasi::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('operator-daerahoperasi.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('operator-daerahoperasi.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class OperatorDaerahOperasiController extends Controller
         $data = OperatorDaerahOperasi::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('operator-daerahoperasi.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('operator-daerahoperasi.form')->with('success', 'Data berhasil dihapus.');
     }
 }

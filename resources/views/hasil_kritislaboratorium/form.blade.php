@@ -18,7 +18,7 @@ Data Pelaporan Hasil Kritis Laboratorium <30 Menit
             </div>
 
             <div class="d-flex justify-content-between mb-4">
-                <h4>Data Pelaporan Hasil Kritis Laboratorium <30 Menit </h4>
+                <h4>Data Pelaporan Hasil Kritis Laboratorium < 30 Menit </h4>
                 <!-- Button trigger modal for creating data -->
                 <button
                   type="button"

@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class PencegahanResikoJatuhController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PencegahanResikoJatuh::all();
-        return view('pencegahan_resikojatuh.index', compact('data'));
+        return view('pencegahan_resikojatuh.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class PencegahanResikoJatuhController extends Controller
 
         PencegahanResikoJatuh::create($validated);
 
-        return redirect()->route('pencegahan-resikojatuh.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('pencegahan-resikojatuh.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class PencegahanResikoJatuhController extends Controller
         $data = PencegahanResikoJatuh::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('pencegahan-resikojatuh.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('pencegahan-resikojatuh.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class PencegahanResikoJatuhController extends Controller
         $data = PencegahanResikoJatuh::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('pencegahan-resikojatuh.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('pencegahan-resikojatuh.form')->with('success', 'Data berhasil dihapus.');
     }
 }

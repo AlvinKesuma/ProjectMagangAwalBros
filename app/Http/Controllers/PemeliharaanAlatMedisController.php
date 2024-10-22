@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class PemeliharaanAlatMedisController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PemeliharaanAlatMedis::all();
-        return view('pemeliharaan_alat_medis.index', compact('data'));
+        return view('pemeliharaan_alat_medis.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class PemeliharaanAlatMedisController extends Controller
         // Create a new entry
         PemeliharaanAlatMedis::create($validated);
 
-        return redirect()->route('pemeliharaan-alat-medis.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('pemeliharaan-alat-medis.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -55,7 +55,7 @@ class PemeliharaanAlatMedisController extends Controller
         $data = PemeliharaanAlatMedis::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('pemeliharaan-alat-medis.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('pemeliharaan-alat-medis.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -63,6 +63,6 @@ class PemeliharaanAlatMedisController extends Controller
         $data = PemeliharaanAlatMedis::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('pemeliharaan-alat-medis.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('pemeliharaan-alat-medis.form')->with('success', 'Data berhasil dihapus.');
     }
 }

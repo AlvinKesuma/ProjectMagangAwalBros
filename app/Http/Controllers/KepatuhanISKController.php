@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class KepatuhanISKController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepatuhanISK::all();
-        return view('kepatuhan_isk.index', compact('data'));
+        return view('kepatuhan_isk.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class KepatuhanISKController extends Controller
         // Create a new entry
         KepatuhanISK::create($validated);
 
-        return redirect()->route('kepatuhan-isk.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepatuhan-isk.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -55,7 +55,7 @@ class KepatuhanISKController extends Controller
         $data = KepatuhanISK::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepatuhan-isk.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepatuhan-isk.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -63,6 +63,6 @@ class KepatuhanISKController extends Controller
         $data = KepatuhanISK::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepatuhan-isk.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepatuhan-isk.form')->with('success', 'Data berhasil dihapus.');
     }
 }

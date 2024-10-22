@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class RehospitalisasiGeriatriController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = RehospitalisasiGeriatri::all();
-        return view('rehospitalisasi_geriatri.index', compact('data'));
+        return view('rehospitalisasi_geriatri.form', compact('data'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class RehospitalisasiGeriatriController extends Controller
         // Create a new entry
         RehospitalisasiGeriatri::create($validated);
 
-        return redirect()->route('rehospitalisasi-geriatri.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('rehospitalisasi-geriatri.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class RehospitalisasiGeriatriController extends Controller
         $data = RehospitalisasiGeriatri::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('rehospitalisasi-geriatri.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('rehospitalisasi-geriatri.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -64,6 +64,6 @@ class RehospitalisasiGeriatriController extends Controller
         $data = RehospitalisasiGeriatri::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('rehospitalisasi-geriatri.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('rehospitalisasi-geriatri.form')->with('success', 'Data berhasil dihapus.');
     }
 }

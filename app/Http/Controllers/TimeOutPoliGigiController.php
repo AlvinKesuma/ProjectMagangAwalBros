@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class TimeOutPoliGigiController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = TimeOutPoliGigi::all();
-        return view('timeout_poligigi.index', compact('data'));
+        return view('timeout_poligigi.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class TimeOutPoliGigiController extends Controller
 
         TimeOutPoliGigi::create($validated);
 
-        return redirect()->route('timeout-poligigi.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('timeout-poligigi.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class TimeOutPoliGigiController extends Controller
         $data = TimeOutPoliGigi::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('timeout-poligigi.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('timeout-poligigi.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class TimeOutPoliGigiController extends Controller
         $data = TimeOutPoliGigi::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('timeout-poligigi.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('timeout-poligigi.form')->with('success', 'Data berhasil dihapus.');
     }
 }

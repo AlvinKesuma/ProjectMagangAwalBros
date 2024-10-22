@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class KepatuhanIdentifikasiController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepatuhanIdentifikasi::all();
-        return view('kepatuhan_identifikasi.index', compact('data'));
+        return view('kepatuhan_identifikasi.form', compact('data'));
     }
 
     public function create()
@@ -41,7 +41,7 @@ class KepatuhanIdentifikasiController extends Controller
 
         KepatuhanIdentifikasi::create($validated);
 
-        return redirect()->route('kepatuhan-identifikasi.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepatuhan-identifikasi.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -74,7 +74,7 @@ class KepatuhanIdentifikasiController extends Controller
         $data = KepatuhanIdentifikasi::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepatuhan-identifikasi.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepatuhan-identifikasi.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -82,6 +82,6 @@ class KepatuhanIdentifikasiController extends Controller
         $data = KepatuhanIdentifikasi::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepatuhan-identifikasi.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepatuhan-identifikasi.form')->with('success', 'Data berhasil dihapus.');
     }
 }

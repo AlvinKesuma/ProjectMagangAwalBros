@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class KelengkapanResepRawatJalanController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KelengkapanResepRawatJalan::all();
-        return view('kelengkapan_resep_rawat_jalan.index', compact('data'));
+        return view('kelengkapan_resep_rawat_jalan.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class KelengkapanResepRawatJalanController extends Controller
         // Create a new entry
         KelengkapanResepRawatJalan::create($validated);
 
-        return redirect()->route('kelengkapan-resep-rawat-jalan.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kelengkapan-resep-rawat-jalan.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -55,7 +55,7 @@ class KelengkapanResepRawatJalanController extends Controller
         $data = KelengkapanResepRawatJalan::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kelengkapan-resep-rawat-jalan.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kelengkapan-resep-rawat-jalan.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -63,7 +63,7 @@ class KelengkapanResepRawatJalanController extends Controller
         $data = KelengkapanResepRawatJalan::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kelengkapan-resep-rawat-jalan.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kelengkapan-resep-rawat-jalan.form')->with('success', 'Data berhasil dihapus.');
     }
 }
 

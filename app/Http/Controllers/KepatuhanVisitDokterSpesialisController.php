@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class KepatuhanVisitDokterSpesialisController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepatuhanVisitDokterSpesialis::all();
-        return view('kepatuhan_visit_dokter_spesialis.index', compact('data'));
+        return view('kepatuhan_visit_dokter_spesialis.form', compact('data'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class KepatuhanVisitDokterSpesialisController extends Controller
         // Create a new entry
         KepatuhanVisitDokterSpesialis::create($validated);
 
-        return redirect()->route('kepatuhan-visit-dokter-spesialis.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepatuhan-visit-dokter-spesialis.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class KepatuhanVisitDokterSpesialisController extends Controller
         $data = KepatuhanVisitDokterSpesialis::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepatuhan-visit-dokter-spesialis.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepatuhan-visit-dokter-spesialis.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -64,6 +64,6 @@ class KepatuhanVisitDokterSpesialisController extends Controller
         $data = KepatuhanVisitDokterSpesialis::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepatuhan-visit-dokter-spesialis.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepatuhan-visit-dokter-spesialis.form')->with('success', 'Data berhasil dihapus.');
     }
 }

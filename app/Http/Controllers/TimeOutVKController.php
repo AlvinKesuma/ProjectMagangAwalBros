@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class TimeOutVKController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = TimeOutVK::all();
-        return view('timeout_vk.index', compact('data'));
+        return view('timeout_vk.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class TimeOutVKController extends Controller
 
         TimeOutVK::create($validated);
 
-        return redirect()->route('timeout-vk.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('timeout-vk.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class TimeOutVKController extends Controller
         $data = TimeOutVK::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('timeout-vk.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('timeout-vk.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class TimeOutVKController extends Controller
         $data = TimeOutVK::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('timeout-vk.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('timeout-vk.form')->with('success', 'Data berhasil dihapus.');
     }
 }

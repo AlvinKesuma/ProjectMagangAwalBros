@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class TeknikSBARPerawatController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = TeknikSBARPerawat::all();
-        return view('tekniksbar_perawat.index', compact('data'));
+        return view('tekniksbar_perawat.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class TeknikSBARPerawatController extends Controller
 
         TeknikSBARPerawat::create($validated);
 
-        return redirect()->route('tekniksbar-perawat.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('tekniksbar-perawat.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class TeknikSBARPerawatController extends Controller
         $data = TeknikSBARPerawat::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('tekniksbar-perawat.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('tekniksbar-perawat.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class TeknikSBARPerawatController extends Controller
         $data = TeknikSBARPerawat::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('tekniksbar-perawat.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('tekniksbar-perawat.form')->with('success', 'Data berhasil dihapus.');
     }
 }

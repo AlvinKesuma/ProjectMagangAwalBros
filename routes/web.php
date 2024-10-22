@@ -58,148 +58,194 @@ use App\Http\Controllers\LOSgagalJantungAkutController;
 | contains the "web" middleware group. Now create something great!
 */
 
-Route::get('/', [LaporanKomiteMutuController::class, 'index'])->name('laporan-komite-mutu.index');
+Route::get('/', [LaporanKomiteMutuController::class, 'form'])->name('laporan-komite-mutu.form');
 
 Route::resource('laporan-komite-mutu', LaporanKomiteMutuController::class)
-    ->only(['index']);
+    ->only(['form']);
 
+Route::get('kepatuhan-identifikasi/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-identifikasi.form');
 Route::resource('kepatuhan-identifikasi', KepatuhanIdentifikasiController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('identifikasi-pemberianobat/form', [KepatuhanIdentifikasiController::class, 'form'])->name('identifikasi-pemberianobat.form');
 Route::resource('identifikasi-pemberianobat', IdentifikasiPemberianObatController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('pasien-pemberianobat/form', [KepatuhanIdentifikasiController::class, 'form'])->name('pasien-pemberianobat.form');
 Route::resource('pasien-pemberianobat', PasienPemberianObatController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('pasien-pemberiandarah/form', [KepatuhanIdentifikasiController::class, 'form'])->name('pasien-pemberiandarah.form');
 Route::resource('pasien-pemberiandarah', PasienPemberianDarahController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('tekniksbar-perawat/form', [KepatuhanIdentifikasiController::class, 'form'])->name('tekniksbar-perawat.form');
 Route::resource('tekniksbar-perawat', TeknikSBARPerawatController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('elektrolit-pekat/form', [KepatuhanIdentifikasiController::class, 'form'])->name('elektrolit-pekat.form');
 Route::resource('elektrolit-pekat', ElektrolitPekatController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('pencegahan-resikojatuh/form', [KepatuhanIdentifikasiController::class, 'form'])->name('pencegahan-resikojatuh.form');
 Route::resource('pencegahan-resikojatuh', PencegahanResikoJatuhController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('pasien-pemberiannutrisi/form', [KepatuhanIdentifikasiController::class, 'form'])->name('pasien-pemberiannutrisi.form');
 Route::resource('pasien-pemberiannutrisi', PasienPemberianNutrisiController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('sampel-darahlaboratorium/form', [KepatuhanIdentifikasiController::class, 'form'])->name('sampel-darahlaboratorium.form');
 Route::resource('sampel-darahlaboratorium', SampelDarahLaboratoriumController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('identifikasi-pasienradiologi/form', [KepatuhanIdentifikasiController::class, 'form'])->name('identifikasi-pasienradiologi.form');
 Route::resource('identifikasi-pasienradiologi', IdentifikasiPasienRadiologiController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('proses-readback/form', [KepatuhanIdentifikasiController::class, 'form'])->name('proses-readback.form');
 Route::resource('proses-readback', ProsesReadBackController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('hasil-kritislaboratorium/form', [KepatuhanIdentifikasiController::class, 'form'])->name('hasil-kritislaboratorium.form');
 Route::resource('hasil-kritislaboratorium', HasilKritisLaboratoriumController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('pembuangan-obatnarkotika/form', [KepatuhanIdentifikasiController::class, 'form'])->name('pembuangan-obatnarkotika.form');
 Route::resource('pembuangan-obatnarkotika', PembuanganObatNarkotikaController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('pelabelan-obatpasien/form', [KepatuhanIdentifikasiController::class, 'form'])->name('pelabelan-obatpasien.form');
 Route::resource('pelabelan-obatpasien', PelabelanObatPasienController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('operator-daerahoperasi/form', [KepatuhanIdentifikasiController::class, 'form'])->name('operator-daerahoperasi.form');
 Route::resource('operator-daerahoperasi', OperatorDaerahOperasiController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('timeout-vk/form', [KepatuhanIdentifikasiController::class, 'form'])->name('timeout-vk.form');
 Route::resource('timeout-vk', TimeOutVKController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('timeout-poligigi/form', [KepatuhanIdentifikasiController::class, 'form'])->name('timeout-poligigi.form');
 Route::resource('timeout-poligigi', TimeOutPoliGigiController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('petugas-cucitangan/form', [KepatuhanIdentifikasiController::class, 'form'])->name('petugas-cucitangan.form');
 Route::resource('petugas-cucitangan', PetugasCuciTanganController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('penggunaan-apd/form', [KepatuhanIdentifikasiController::class, 'form'])->name('penggunaan-apd.form');
 Route::resource('penggunaan-apd', PenggunaanAPDController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('info-penyakitpasien/form', [KepatuhanIdentifikasiController::class, 'form'])->name('info-penyakitpasien.form');
 Route::resource('info-penyakitpasien', InfoPenyakitPasienController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('boarding-timepasien/form', [KepatuhanIdentifikasiController::class, 'form'])->name('boarding-timepasien.form');
 Route::resource('boarding-timepasien', BoardingTimePasienController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('antibiotic-prophylaxistype/form', [KepatuhanIdentifikasiController::class, 'form'])->name('antibiotic-prophylaxistype.form');
 Route::resource('antibiotic-prophylaxistype', AntibioticProphylaxisTypeController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('antibiotik-profilaksis/form', [KepatuhanIdentifikasiController::class, 'form'])->name('antibiotik-profilaksis.form');
 Route::resource('antibiotik-profilaksis', AntibiotikProfilaksisController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('penundaan-operasi-electif-30min/form', [KepatuhanIdentifikasiController::class, 'form'])->name('penundaan-operasi-electif-30min.form');
 Route::resource('penundaan-operasi-electif-30min', PenundaanOperasiElectif30MinController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('penundaan-operasi-electif-1jam/form', [KepatuhanIdentifikasiController::class, 'form'])->name('penundaan-operasi-electif-1jam.form');
 Route::resource('penundaan-operasi-electif-1jam', PenundaanOperasiElectif1JamController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('waktu-tanggap-seksi-sesarea/form', [KepatuhanIdentifikasiController::class, 'form'])->name('waktu-tanggap-seksi-sesarea.form');
 Route::resource('waktu-tanggap-seksi-sesarea', WaktuTanggapSeksiSesareaController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kejadian-water-intrusion/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kejadian-water-intrusion.form');
 Route::resource('kejadian-water-intrusion', KejadianWaterIntrusionController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('pemeliharaan-alat-medis/form', [KepatuhanIdentifikasiController::class, 'form'])->name('pemeliharaan-alat-medis.form');
 Route::resource('pemeliharaan-alat-medis', PemeliharaanAlatMedisController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kepatuhan-vap/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-vap.form');
 Route::resource('kepatuhan-vap', KepatuhanVAPController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kepatuhan-ido/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-ido.form');
 Route::resource('kepatuhan-ido', KepatuhanIDOController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kepatuhan-iadp/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-iadp.form');
 Route::resource('kepatuhan-iadp', KepatuhanIADPController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kepatuhan-isk/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-isk.form');
 Route::resource('kepatuhan-isk', KepatuhanISKController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kelengkapan-resep-rawat-jalan/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kelengkapan-resep-rawat-jalan.form');
 Route::resource('kelengkapan-resep-rawat-jalan', KelengkapanResepRawatJalanController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('pengelolaan-komplain-pasien/form', [KepatuhanIdentifikasiController::class, 'form'])->name('pengelolaan-komplain-pasien.form');
 Route::resource('pengelolaan-komplain-pasien', PengelolaanKomplainPasienController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kepuasan-pasien/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepuasan-pasien.form');
 Route::resource('kepuasan-pasien', KepuasanPasienController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('waktu-tunggu-rawat-jalan-30min/form', [KepatuhanIdentifikasiController::class, 'form'])->name('waktu-tunggu-rawat-jalan-30min.form');
 Route::resource('waktu-tunggu-rawat-jalan-30min', WaktuTungguRawatJalan30MinController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('waktu-rawat-jalan-under30min/form', [KepatuhanIdentifikasiController::class, 'form'])->name('waktu-rawat-jalan-under30min.form');
 Route::resource('waktu-rawat-jalan-under30min', WaktuTungguRawatJalanUnder30MinController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('waktu-rawat-jalan-up60min/form', [KepatuhanIdentifikasiController::class, 'form'])->name('waktu-rawat-jalan-up60min.form');
 Route::resource('waktu-rawat-jalan-up60min', WaktuTungguRawatJalanUp60MinController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kepatuhan-visit-dokter-spesialis/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-visit-dokter-spesialis.form');
 Route::resource('kepatuhan-visit-dokter-spesialis', KepatuhanVisitDokterSpesialisController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kepatuhan-formularium-nasional/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-formularium-nasional.form');
 Route::resource('kepatuhan-formularium-nasional', KepatuhanFormulariumNasionalController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('kepatuhan-alur-klinis/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-alur-klinis.form');
 Route::resource('kepatuhan-alur-klinis', KepatuhanAlurKlinisController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('rehospitalisasi-geriatri/form', [KepatuhanIdentifikasiController::class, 'form'])->name('rehospitalisasi-geriatri.form');
 Route::resource('rehospitalisasi-geriatri', RehospitalisasiGeriatriController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('discharge-planning/form', [KepatuhanIdentifikasiController::class, 'form'])->name('discharge-planning.form');
 Route::resource('discharge-planning', DischargePlanningController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('feedback-pelanggan/form', [KepatuhanIdentifikasiController::class, 'form'])->name('feedback-pelanggan.form');
 Route::resource('feedback-pelanggan', FeedbackPelangganController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('perbaikan-status-cva/form', [KepatuhanIdentifikasiController::class, 'form'])->name('perbaikan-status-cva.form');
 Route::resource('perbaikan-status-cva', PerbaikanStatusCVAController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
+Route::get('los-gagal-jantung-akut/form', [KepatuhanIdentifikasiController::class, 'form'])->name('los-gagal-jantung-akut.form');
 Route::resource('los-gagal-jantung-akut', LOSgagalJantungAkutController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy']);
+    ->only(['store', 'edit', 'update', 'destroy']);
 
 
     

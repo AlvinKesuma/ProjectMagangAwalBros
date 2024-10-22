@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 
 class KepatuhanIDOController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepatuhanIDO::all();
-        return view('kepatuhan_ido.index', compact('data'));
+        return view('kepatuhan_ido.form', compact('data'));
     }
 
     public function create()
@@ -33,7 +33,7 @@ class KepatuhanIDOController extends Controller
         // Create a new entry
         KepatuhanIDO::create($validated);
 
-        return redirect()->route('kepatuhan-ido.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepatuhan-ido.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -57,7 +57,7 @@ class KepatuhanIDOController extends Controller
         $data = KepatuhanIDO::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepatuhan-ido.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepatuhan-ido.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -65,6 +65,6 @@ class KepatuhanIDOController extends Controller
         $data = KepatuhanIDO::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepatuhan-ido.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepatuhan-ido.form')->with('success', 'Data berhasil dihapus.');
     }
 }

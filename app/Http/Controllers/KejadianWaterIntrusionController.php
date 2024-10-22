@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class KejadianWaterIntrusionController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KejadianWaterIntrusion::all();
-        return view('kejadian_water_intrusion.index', compact('data'));
+        return view('kejadian_water_intrusion.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class KejadianWaterIntrusionController extends Controller
         // Create a new entry
         KejadianWaterIntrusion::create($validated);
 
-        return redirect()->route('kejadian-water-intrusion.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kejadian-water-intrusion.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -55,7 +55,7 @@ class KejadianWaterIntrusionController extends Controller
         $data = KejadianWaterIntrusion::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kejadian-water-intrusion.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kejadian-water-intrusion.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -63,6 +63,6 @@ class KejadianWaterIntrusionController extends Controller
         $data = KejadianWaterIntrusion::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kejadian-water-intrusion.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kejadian-water-intrusion.form')->with('success', 'Data berhasil dihapus.');
     }
 }

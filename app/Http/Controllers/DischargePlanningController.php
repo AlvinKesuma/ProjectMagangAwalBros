@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\DischargePlanning;
 class DischargePlanningController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = DischargePlanning::all();
-        return view('discharge_planning.index', compact('data'));
+        return view('discharge_planning.form', compact('data'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class DischargePlanningController extends Controller
         // Create a new entry
         DischargePlanning::create($validated);
 
-        return redirect()->route('discharge-planning.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('discharge-planning.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class DischargePlanningController extends Controller
         $data = DischargePlanning::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('discharge-planning.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('discharge-planning.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -64,7 +64,7 @@ class DischargePlanningController extends Controller
         $data = DischargePlanning::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('discharge-planning.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('discharge-planning.form')->with('success', 'Data berhasil dihapus.');
     }
 }
 

@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class KepatuhanIADPController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepatuhanIADP::all();
-        return view('kepatuhan_iadp.index', compact('data'));
+        return view('kepatuhan_iadp.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class KepatuhanIADPController extends Controller
         // Create a new entry
         KepatuhanIADP::create($validated);
 
-        return redirect()->route('kepatuhan-iadp.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepatuhan-iadp.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -55,7 +55,7 @@ class KepatuhanIADPController extends Controller
         $data = KepatuhanIADP::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepatuhan-iadp.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepatuhan-iadp.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -63,6 +63,6 @@ class KepatuhanIADPController extends Controller
         $data = KepatuhanIADP::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepatuhan-iadp.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepatuhan-iadp.form')->with('success', 'Data berhasil dihapus.');
     }
 }

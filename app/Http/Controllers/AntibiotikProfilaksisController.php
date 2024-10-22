@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class AntibiotikProfilaksisController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = AntibiotikProfilaksis::all();
-        return view('antibiotik_profilaksis.index', compact('data'));
+        return view('antibiotik_profilaksis.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class AntibiotikProfilaksisController extends Controller
 
         AntibiotikProfilaksis::create($validated);
 
-        return redirect()->route('antibiotik-profilaksis.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('antibiotik-profilaksis.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class AntibiotikProfilaksisController extends Controller
         $data = AntibiotikProfilaksis::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('antibiotik-profilaksis.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('antibiotik-profilaksis.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class AntibiotikProfilaksisController extends Controller
         $data = AntibiotikProfilaksis::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('antibiotik-profilaksis.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('antibiotik-profilaksis.form')->with('success', 'Data berhasil dihapus.');
     }
 }

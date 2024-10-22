@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\LOSgagalJantungAkut;
 class LOSgagalJantungAkutController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = LOSgagalJantungAkut::all();
-        return view('los_gagal_jantung_akut.index', compact('data'));
+        return view('los_gagal_jantung_akut.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class LOSgagalJantungAkutController extends Controller
         // Create a new entry
         LOSgagalJantungAkut::create($validated);
 
-        return redirect()->route('los-gagal-jantung-akut.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('los-gagal-jantung-akut.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class LOSgagalJantungAkutController extends Controller
         $data = LOSgagalJantungAkut::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('los-gagal-jantung-akut.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('los-gagal-jantung-akut.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,7 +62,7 @@ class LOSgagalJantungAkutController extends Controller
         $data = LOSgagalJantungAkut::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('los-gagal-jantung-akut.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('los-gagal-jantung-akut.form')->with('success', 'Data berhasil dihapus.');
     }
 }
 

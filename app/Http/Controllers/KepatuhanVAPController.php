@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class KepatuhanVAPController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepatuhanVAP::all();
-        return view('kepatuhan_vap.index', compact('data'));
+        return view('kepatuhan_vap.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class KepatuhanVAPController extends Controller
         // Create a new entry
         KepatuhanVAP::create($validated);
 
-        return redirect()->route('kepatuhan-vap.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepatuhan-vap.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -55,7 +55,7 @@ class KepatuhanVAPController extends Controller
         $data = KepatuhanVAP::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepatuhan-vap.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepatuhan-vap.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -63,6 +63,6 @@ class KepatuhanVAPController extends Controller
         $data = KepatuhanVAP::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepatuhan-vap.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepatuhan-vap.form')->with('success', 'Data berhasil dihapus.');
     }
 }

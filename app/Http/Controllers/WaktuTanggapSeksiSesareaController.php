@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class WaktuTanggapSeksiSesareaController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = WaktuTanggapSeksiSesarea::all();
-        return view('waktu_tanggap_seksi_sesarea.index', compact('data'));
+        return view('waktu_tanggap_seksi_sesarea.form', compact('data'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class WaktuTanggapSeksiSesareaController extends Controller
         // Create a new entry
         WaktuTanggapSeksiSesarea::create($validated);
 
-        return redirect()->route('waktu-tanggap-seksi-sesarea.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('waktu-tanggap-seksi-sesarea.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class WaktuTanggapSeksiSesareaController extends Controller
         $data = WaktuTanggapSeksiSesarea::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('waktu-tanggap-seksi-sesarea.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('waktu-tanggap-seksi-sesarea.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -64,6 +64,6 @@ class WaktuTanggapSeksiSesareaController extends Controller
         $data = WaktuTanggapSeksiSesarea::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('waktu-tanggap-seksi-sesarea.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('waktu-tanggap-seksi-sesarea.form')->with('success', 'Data berhasil dihapus.');
     }
 }

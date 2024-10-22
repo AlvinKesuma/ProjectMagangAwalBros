@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class KepuasanPasienController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepuasanPasien::all();
-        return view('kepuasan_pasien.index', compact('data'));
+        return view('kepuasan_pasien.form', compact('data'));
     }
 
     public function create()
@@ -30,7 +30,7 @@ class KepuasanPasienController extends Controller
         // Create a new entry
         KepuasanPasien::create($validated);
 
-        return redirect()->route('kepuasan-pasien.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepuasan-pasien.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -53,7 +53,7 @@ class KepuasanPasienController extends Controller
         $data = KepuasanPasien::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepuasan-pasien.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepuasan-pasien.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -61,6 +61,6 @@ class KepuasanPasienController extends Controller
         $data = KepuasanPasien::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepuasan-pasien.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepuasan-pasien.form')->with('success', 'Data berhasil dihapus.');
     }
 }

@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class KepatuhanFormulariumNasionalController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = KepatuhanFormulariumNasional::all();
-        return view('kepatuhan_formularium_nasional.index', compact('data'));
+        return view('kepatuhan_formularium_nasional.form', compact('data'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class KepatuhanFormulariumNasionalController extends Controller
         // Create a new entry
         KepatuhanFormulariumNasional::create($validated);
 
-        return redirect()->route('kepatuhan-formularium-nasional.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('kepatuhan-formularium-nasional.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class KepatuhanFormulariumNasionalController extends Controller
         $data = KepatuhanFormulariumNasional::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('kepatuhan-formularium-nasional.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('kepatuhan-formularium-nasional.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -64,6 +64,6 @@ class KepatuhanFormulariumNasionalController extends Controller
         $data = KepatuhanFormulariumNasional::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('kepatuhan-formularium-nasional.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('kepatuhan-formularium-nasional.form')->with('success', 'Data berhasil dihapus.');
     }
 }

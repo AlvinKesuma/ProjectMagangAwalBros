@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class PembuanganObatNarkotikaController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PembuanganObatNarkotika::all();
-        return view('pembuangan_obatnarkotika.index', compact('data'));
+        return view('pembuangan_obatnarkotika.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class PembuanganObatNarkotikaController extends Controller
 
         PembuanganObatNarkotika::create($validated);
 
-        return redirect()->route('pembuangan-obatnarkotika.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('pembuangan-obatnarkotika.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class PembuanganObatNarkotikaController extends Controller
         $data = PembuanganObatNarkotika::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('pembuangan-obatnarkotika.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('pembuangan-obatnarkotika.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class PembuanganObatNarkotikaController extends Controller
         $data = PembuanganObatNarkotika::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('pembuangan-obatnarkotika.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('pembuangan-obatnarkotika.form')->with('success', 'Data berhasil dihapus.');
     }
 }

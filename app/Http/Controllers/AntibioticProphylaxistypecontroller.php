@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class AntibioticProphylaxisTypeController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = AntibioticProphylaxisType::all();
-        return view('antibiotic_prophylaxistype.index', compact('data'));
+        return view('antibiotic_prophylaxistype.form', compact('data'));
     }
 
     public function create()
@@ -31,7 +31,7 @@ class AntibioticProphylaxisTypeController extends Controller
 
         AntibioticProphylaxisType::create($validated);
 
-        return redirect()->route('antibiotic-prophylaxistype.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('antibiotic-prophylaxistype.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -54,7 +54,7 @@ class AntibioticProphylaxisTypeController extends Controller
         $data = AntibioticProphylaxisType::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('antibiotic-prophylaxistype.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('antibiotic-prophylaxistype.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -62,6 +62,6 @@ class AntibioticProphylaxisTypeController extends Controller
         $data = AntibioticProphylaxisType::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('antibiotic-prophylaxis.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('antibiotic-prophylaxis.form')->with('success', 'Data berhasil dihapus.');
     }
 }

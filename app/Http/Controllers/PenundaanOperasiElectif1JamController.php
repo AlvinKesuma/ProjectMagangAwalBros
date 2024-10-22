@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class PenundaanOperasiElectif1JamController extends Controller
 {
-    public function index()
+    public function form()
     {
         $data = PenundaanOperasiElectif1Jam::all();
-        return view('penundaan_operasi_electif_1Jam.index', compact('data'));
+        return view('penundaan_operasi_electif_1Jam.form', compact('data'));
     }
 
     public function create()
@@ -32,7 +32,7 @@ class PenundaanOperasiElectif1JamController extends Controller
         // Create a new entry
         PenundaanOperasiElectif1Jam::create($validated);
 
-        return redirect()->route('penundaan-operasi-electif-1jam.index')->with('success', 'Data berhasil disimpan.');
+        return redirect()->route('penundaan-operasi-electif-1jam.form')->with('success', 'Data berhasil disimpan.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class PenundaanOperasiElectif1JamController extends Controller
         $data = PenundaanOperasiElectif1Jam::findOrFail($id);
         $data->update($validated);
 
-        return redirect()->route('penundaan-operasi-electif-1jam.index')->with('success', 'Data berhasil diperbarui.');
+        return redirect()->route('penundaan-operasi-electif-1jam.form')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -64,6 +64,6 @@ class PenundaanOperasiElectif1JamController extends Controller
         $data = PenundaanOperasiElectif1Jam::findOrFail($id);
         $data->delete();
 
-        return redirect()->route('penundaan-operasi-electif-1jam.index')->with('success', 'Data berhasil dihapus.');
+        return redirect()->route('penundaan-operasi-electif-1jam.form')->with('success', 'Data berhasil dihapus.');
     }
 }
