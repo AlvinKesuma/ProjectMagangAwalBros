@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class LaporanKomiteMutuController extends Controller
 {
-    public function form()
+    public function index()
     {
-        return view('laporan_komite_mutu.form');
+        return view('laporan_komite_mutu.index');
     }
 }

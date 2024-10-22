@@ -58,10 +58,10 @@ use App\Http\Controllers\LOSgagalJantungAkutController;
 | contains the "web" middleware group. Now create something great!
 */
 
-Route::get('/', [LaporanKomiteMutuController::class, 'form'])->name('laporan-komite-mutu.form');
+Route::get('/', [LaporanKomiteMutuController::class, 'index'])->name('laporan-komite-mutu.index');
 
 Route::resource('laporan-komite-mutu', LaporanKomiteMutuController::class)
-    ->only(['form']);
+    ->only(['index']);
 
 Route::get('kepatuhan-identifikasi/form', [KepatuhanIdentifikasiController::class, 'form'])->name('kepatuhan-identifikasi.form');
 Route::resource('kepatuhan-identifikasi', KepatuhanIdentifikasiController::class)
