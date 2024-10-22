@@ -27,14 +27,17 @@ class KepatuhanIdentifikasiController extends Controller
             'kip2' => 'required|numeric|between:0,100.0',
             'kip3' => 'required|numeric|between:0,100.0',
             'kip4' => 'required|numeric|between:0,100.0',
-            'num' => 'required|numeric|between:0,100.0',
-            'denum' => 'required|numeric|between:0,100.0',
             'month' => 'required|in:Januari,Februari,Maret,April,Mei,Juni,Juli,Agustus,September,Oktober,November,Desember',
             'year' => 'required|in:2023,2024',
         ]);
-         // Hitung total num dan denum
-         $num = $validated['kip1'] + $validated['kip2'] + $validated['kip3'] + $validated['kip4'];
-         $denum = $num;
+
+        // Hitung total num dan denum dari kip1 hingga kip4
+        $num = $validated['kip1'] + $validated['kip2'] + $validated['kip3'] + $validated['kip4'];
+        $denum = $num;
+
+        // Gabungkan num dan denum ke dalam data yang akan disimpan
+        $validated['num'] = $num;
+        $validated['denum'] = $denum;
 
         KepatuhanIdentifikasi::create($validated);
 
@@ -56,11 +59,17 @@ class KepatuhanIdentifikasiController extends Controller
             'kip2' => 'required|numeric|between:0,100.0',
             'kip3' => 'required|numeric|between:0,100.0',
             'kip4' => 'required|numeric|between:0,100.0',
-            'num' => 'required|numeric|between:0,100.0',
-            'denum' => 'required|numeric|between:0,100.0',
             'month' => 'required|in:Januari,Februari,Maret,April,Mei,Juni,Juli,Agustus,September,Oktober,November,Desember',
             'year' => 'required|in:2023,2024',
         ]);
+
+        // Hitung total num dan denum dari kip1 hingga kip4
+        $num = $validated['kip1'] + $validated['kip2'] + $validated['kip3'] + $validated['kip4'];
+        $denum = $num;
+
+        // Gabungkan num dan denum ke dalam data yang akan diperbarui
+        $validated['num'] = $num;
+        $validated['denum'] = $denum;
 
         $data = KepatuhanIdentifikasi::findOrFail($id);
         $data->update($validated);

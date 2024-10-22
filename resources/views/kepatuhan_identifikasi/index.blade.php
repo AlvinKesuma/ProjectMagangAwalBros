@@ -130,11 +130,11 @@ Data Kepatuhan Identifikasi
                     <div class="row g-2 mb-3">
                         <div class="col">
                             <label for="num" class="form-label">Num</label>
-                            <input type="number" step="0.1" id="num" name="num" class="form-control" placeholder="Masukkan Num" required>
+                            <input type="number" step="0.1" id="num" name="num" class="form-control" placeholder="Masukkan Num" readonly>
                         </div>
                         <div class="col">
                             <label for="denum" class="form-label">Denum</label>
-                            <input type="number" step="0.1" id="denum" name="denum" class="form-control" placeholder="Masukkan Denum" required>
+                            <input type="number" step="0.1" id="denum" name="denum" class="form-control" placeholder="Masukkan Denum" readonly>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -217,6 +217,22 @@ Data Kepatuhan Identifikasi
                 };
             });
         });
+    });
+    
+    function calculateSum() {
+        const kip1 = parseFloat(document.getElementById('kip1').value) || 0;
+        const kip2 = parseFloat(document.getElementById('kip2').value) || 0;
+        const kip3 = parseFloat(document.getElementById('kip3').value) || 0;
+        const kip4 = parseFloat(document.getElementById('kip4').value) || 0;
+
+        const sum = kip1 + kip2 + kip3 + kip4;
+
+        document.getElementById('num').value = sum;
+        document.getElementById('denum').value = sum;
+    }
+
+    document.querySelectorAll('#kip1, #kip2, #kip3, #kip4').forEach(input => {
+        input.addEventListener('input', calculateSum);
     });
 
     function openCreateModal() {
